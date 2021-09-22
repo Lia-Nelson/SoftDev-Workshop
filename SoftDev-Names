@@ -1,3 +1,10 @@
+'''
+Julia Nelson
+SoftDev
+K02A -- Print a SoftDev Student
+2021-09-21
+'''
+
 import random
 # allows random integer function to be used
 
