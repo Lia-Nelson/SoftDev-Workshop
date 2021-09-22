@@ -4,17 +4,22 @@ import random
 pd1 = ["Julia Nelson", "Owen Yaggy", "Oscar Wang", "Angela Zhang",
        "Edwin Zheng", "Ella Kretchmer", "Ivan Lam", "Justin Morrill",
        "Naomi Naranjo", "Tina Nguyen", "Tami Takada", "Christopher Liu",
-       "Lucas Lee", "Zhao Yu Lin", "Lucas Tom-Wong", "Rayat Roy", "Michelle Lo", "Theodore Fahey", "Aryaman Gowenka",
-       "Haotian Gan", "William Chen", "Aaron Contreras", "Shyne Cha",
-       "Sadid Ethun", "Emma Buller", "Shriya Anand", "Reng Zheng",
-       "Tomas Acuna", "Alejandro Alonso", "Deven Maheshwari", "Yusuf Elsharawy",
-       "Ishiaq Mahid", "Gavin McGinley", "Ivan Mijacka"]
+       "Lucas Lee", "Zhao Yu Lin", "Lucas Tom-Wong", "Rayat Roy", "Michelle Lo",
+       "Theodore Fahey","Aryaman Gowenka", "Haotian Gan", "William Chen",
+       "Aaron Contreras", "Shyne Cha", "Sadid Ethun", "Emma Buller",
+       "Shriya Anand", "Reng Zheng", "Tomas Acuna", "Alejandro Alonso",
+       "Deven Maheshwari", "Yusuf Elsharawy", "Ishiaq Mahid", "Gavin McGinley",
+       "Ivan Mijacka"]
 # defines pd1 as the list of names of the students in Mr. Mykolyk's period 1
 # software development class
 pd2 = ["Haotian Gan", "Raymond Yueng", "Kevin Cao", "Michelle Lo",
        "Christopher Liu", "Michael Borczuk", "Josephine Lee",
        "Alif Abdullah", "Justin Zou", "Andy Lin", "Rachel Xiao",
-       "Andrew Juang", "Yuqing Qu", "Shadman Rakib", "Annabel Zhang"
+       "Andrew Juang", "Yuqing Qu", "Shadman Rakib", "Annabel Zhang",
+       "David ASC20", "Liesel Wong", "Daniel Sooknanan",
+       "Austin Ngan", "Thomas Yu", "Yaying Liang Li", "Jessie Xie",
+       "Eric Guo", "Jonathan Wu", "Shriya Anand", "Noakai Aronesty",
+       "Yoonah Chang", "Roshani Shrestha", "Qina Liu", "Han Zhang"
        ]
 # defines pd2 as the list of names of the students in Mr. Mykolyk's period 2
 # software development class
