@@ -12,7 +12,6 @@
 
 ##enables debug print statements
 DEBUG = False
-##if this exists as a txt you can import it, but we do not have a txt, json, csv, etc of names
 ##names are listed last, first initial b/c that is convention in most systems + sorts by last name then first name
 pd1 = open("pd1_names.txt", "r").read().strip().split("\n") #list storing names for pd1 kids imported from file.
 pd2 = open("pd2_names.txt", "r").read().strip().split("\n") #list storing names for pd2 kids imported from file.
