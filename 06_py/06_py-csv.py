@@ -89,7 +89,7 @@ def test_probs(n):
     # loop through keys and set their counters to 0
     for i in testResults:
         testResults[i] = 0
-    # run n trials - each time kek (a profession) is returned increment its value in the dictionary by 1
+    # run n trials - each time key (a profession) is returned increment its value in the dictionary by 1
     for i in range(n):
         testResults[picker()] += 1
     # loop through dictionary and convert value to a list with the number of times returned and a percentage
