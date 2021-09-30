@@ -6,6 +6,11 @@ K08 -- Visiting Workshops and Investigating a Command
 Investigate the Command: $ python3 -m venv ~/myherozero
 
 1. The python3 command opens a python interactive sesssion of that specific version
-2. -m 
+2. -m command opens a module?
+3. Executing the venv command creates a lightweight "virtual environment" at the target location
+4. ~/myherozero indicates the path to that location
+5. ~/ is shorthand for the current user's home folder
 
-Sources: https://docs.python.org/3/library/
+Sources:
+https://docs.python.org/3/library/
+https://www.google.com/search?channel=cus5&client=firefox-b-1-d&q=%7E%2F+meaning+command+line
