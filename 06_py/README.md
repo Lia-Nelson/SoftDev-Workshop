@@ -1,5 +1,5 @@
-# Summative assesment/description of 06_py
-## GOOFY GOOBERS
+# Summative Assesment/Description of 06_py
+## Goofy Goobers
 ## Julia Nelson, Oscar Wang, Owen Yaggy
 
 ### File I/O (Mostly the I)
