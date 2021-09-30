@@ -1,0 +1,11 @@
+Pineapple Ducks - Angela Zhang, Sean Ging, and Julia Nelson
+SoftDev
+K08 -- Visiting Workshops and Investigating a Command
+2021-09-30
+
+Investigate the Command: $ python3 -m venv ~/myherozero
+
+1. The python3 command opens a python interactive sesssion of that specific version
+2. -m 
+
+Sources: https://docs.python.org/3/library/
