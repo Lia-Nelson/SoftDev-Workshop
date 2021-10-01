@@ -1,1 +1,23 @@
+Pineapple Ducks - Angela Zhang, Sean Ging, and Julia Nelson
+SoftDev
+K08 -- Visiting Workshops and Investigating a Command
+2021-09-30
 
+Questions:
+- How would our programs' running time scale in comparison with larger CSV files?
+- Are they any inefficiancies that can be fixed simply?
+- Can a freshie understand this?
+- Will the different methods of solving the same problem sometimes have advantages under different scenarios?
+- Are there any other data structures that could help solve this problem?
+
+Comments:
+- One of our teammates' codes uses a second dictionary in order to store consecutive sums
+- One of out teammates had their weighted occupation selector return unemployed for with a percentage of 100 - the total percentages of the occupations
+- Most of our teamates used a consecutive sum to solve the problem, but one instead produced a random percentage as a float and then used consecutive subtraction from that float, returing the final occupation that tipped this new value either to zero or below it
+
+Concerns:
+- Although the comments were helpful, they were not enough to prevent our group from having to ask each other clarification questions
+- The naming conventions implemented in our code could likely be improved
+- It was often difficult to find the appropriate repository due to the names that people chose
+- The repositories that were linked under stuy-softdev/workshop21-22/1 were not updated
+- People had different names for their files containing python
