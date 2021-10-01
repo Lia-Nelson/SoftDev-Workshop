@@ -1,1 +1,4 @@
+What does activating a virtual environment do?
+$ source bin/activate  will activate a virtual environment
 
+$ ssh jnelson20@149/89/160.130
