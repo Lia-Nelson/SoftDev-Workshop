@@ -5,12 +5,25 @@ K08 -- Visiting Workshops and Investigating a Command
 
 Investigate the Command: $ python3 -m venv ~/myherozero
 
-1. The python3 command opens a python interactive sesssion of that specific version
-2. -m command opens a module?
-3. Executing the venv command creates a lightweight "virtual environment" at the target location
-4. ~/myherozero indicates the path to that location
-5. ~/ is shorthand for the current user's home folder
+1. Running the command on my personal computer led to the creation of a directory myherozero that was a subdirectory of the directory ~, which in and of itself was a subdirectory of the directory in which I excecuted the command
+2. The myherozero directory included a file called pyvenv.cfg and its contents appeared as such:
+09/30/2021  08:31 PM    <DIR>          .
+09/30/2021  08:31 PM    <DIR>          ..
+09/30/2021  08:31 PM    <DIR>          Include
+09/30/2021  08:31 PM    <DIR>          Lib
+09/30/2021  08:31 PM               164 pyvenv.cfg
+09/30/2021  08:31 PM    <DIR>          Scripts
+               1 File(s)            164 bytes
+               5 Dir(s)  458,167,877,632 bytes free
+3. The python3 command opens a python interactive sesssion specifically of python3
+4. -m allows a module =located on the Python module path to be executed as a script
+5. The venv is short for 'virtual environment' and indicates a module
+6. ~/myherozero indicates the path to that target location
+7. ~/ is shorthand for the current user's home folder
+8. The entire command creates a lightweight "virtual environment" at the target location - this should be a directory called myherozero that is a subdirectory of the user's home/root folder, but on my machine (I ran the command through the command prompt on Windows 10) the command had a slightly different result
 
 Sources:
 https://docs.python.org/3/library/
-https://www.google.com/search?channel=cus5&client=firefox-b-1-d&q=%7E%2F+meaning+command+line
+https://docs.python.org/3.4/tutorial/venv.html
+https://docs.python.org/3/using/cmdline.html
+https://askubuntu.com/questions/85149/what-does-mean
