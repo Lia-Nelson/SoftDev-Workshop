@@ -1,4 +1,51 @@
-What does activating a virtual environment do?
-$ source bin/activate  will activate a virtual environment
+Julia Nelson + Dahlia, Oscar Wang + Alfred 
+SoftDev
+K09: Simple Path to Greatness 
+2021-10-03
 
-$ ssh jnelson20@149/89/160.130
+Q0:
+In Java a similar syntax is used to declare an instance of a class.
+(ie: Dog a = new Dog())
+
+Q1:
+The '/' character is used in the terminal to indicate a path to a 
+directory. When changing directory using cd, the '/' character 
+becomes useful when the user wants to change directories multiple
+times with one command. Alternatively, running `cd /` takes the user
+to the root directory of their computer. The '/' character is also 
+used in Java to create inline comments.
+
+Q2: 
+`print(__name__)` will print the name of the file the command is
+being run from into the terminal running it. In this case, it
+will be 'app.py'. 
+######################
+After running, this did print to the terminal in the following line:
+` * Serving Flask app 'app' (lazy loading)`.
+
+Q3:
+This will not appear anywhere because it is being returned from the
+function as an output, but Python doesn't have anything to do with 
+the output.
+######################
+After running, "No hablo queso!" appeared on the web server with the 
+URL `http://127.0.0.1:5000/`, which was indicated by the terminal output
+after running `python3 app.py` in the terminal by this line:
+` * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)`
+
+Q4: 
+This looks like calling a function within a class. The class in this
+case is 'Flask', which is being stored in the variable 'app' and the
+function is 'run()'.
+
+Questions: 
+1. What is the difference between this and localhost:8000?
+
+$ source ~/abc/bin/activate will activate my virtual environment
+2. What does activating a virtual environment do?
+
+jnelson20@cslab3-30:~/abc$ pip3 install flask
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e1b3f8a90>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /simple/flask/
+WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e1b3f8190>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /simple/flask/
+WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e1b3f8130>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /simple/flask/ 
+3. How come you can't establish a network connection when establishing an ssh with a lab machine?
