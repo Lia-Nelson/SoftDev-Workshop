@@ -48,4 +48,4 @@ jnelson20@cslab3-30:~/abc$ pip3 install flask
 WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e1b3f8a90>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /simple/flask/
 WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e1b3f8190>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /simple/flask/
 WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e1b3f8130>: Failed to establish a new connection: [Errno 101] Network is unreachable')': /simple/flask/ 
-3. How come you can't establish a network connection when establishing an ssh with a lab machine?
+3. What is causing this failure to establish a connection?
