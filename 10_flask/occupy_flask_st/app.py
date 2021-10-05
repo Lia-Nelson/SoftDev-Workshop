@@ -1,21 +1,13 @@
 # Goofy Goobers - Oscar Wang, Owen Yaggy, Julia Nelson
 # SoftDev
-# K06 -- Return a random professional field based on the percentage of jobs in that field
-# 2021-09-28
-
-## OUR APPROACH ##
-# We first figured out how to read a CSV file using the documentation for the csv module
-# After reading the data and storing it in a dictionary, we converted that dictionary to
-# one where the keys/percentages are consecutive sums of all of the percentages of the
-# prior keys in the dictionary. We decided to do this because it allows us to treat the
-# dictionary as one continuous scale, making it easy to randomly pick a point along that
-# scale and associate it with a profession. We divided our program into functions for
-# readability and ease of use. This also allowed us to test our program with a separate
-# function.
+# K10 -- Return a random professional field based on the percentage of jobs in that field
+# 2021-10-06
 
 # imports csv and random as we will be using functions from those modules
 import csv
 import random
+from flask import Flask
+app = Flask(__name__)
 
 # creates a function called openCSV which returns a dictionary where the value is a float
 # representing the percent change of being chosen and the total is the total of those
@@ -97,12 +89,26 @@ def test_probs(n):
         testResults[i] = [testResults[i], round(testResults[i] / n * 10000) / 100]
     print(testResults)
 
+def getList():
+    dict, total = openCSV('occupations.csv')
+    text = '''<ul>'''
+    for i in dict:
+        text += f"<li>{i}</li>"
+    text += "</ul>"
+    return text
 
-def main():
-    print(picker())
-    # test_probs(10000)
 
-# ensures that the not every previous function will have to run before the main one
-# (which should be called first
-if __name__ == "__main__":
-    main()
+@app.route("/")
+def hello_world():
+    occupations = getList()
+    html = f'''
+    Goofy Goobers - Oscar Wang, Owen Yaggy, Julia Nelson
+    <br><b>Your randomized output:</b> {picker()}
+    <br><br>List of all applications:
+    {getList()}
+    '''
+    print("Displayed random output successfully")
+    return html
+
+
+app.run()
