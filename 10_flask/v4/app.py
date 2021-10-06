@@ -1,6 +1,12 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2021
+'''
+Julia Nelson, Oscar Wang, Owen Yaggy
+SoftDev
+K10 -- Putting Little Pieces Together
+2021-10-05
+'''
+# this version has the if __name__ == "__main__" conditional which runs the code if the file is not imported
+
+# what does it mean for a file to be imported?
 
 from flask import Flask
 app = Flask(__name__) #create instance of class Flask
