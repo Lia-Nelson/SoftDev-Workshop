@@ -7,7 +7,7 @@ K10 -- Putting Little Pieces Together
 # this is different from v1 in that it shows when it is about to print the name of the file before it does
 # this will probably appear in the terminal right before the line where it prints the name
 
-# it actually doesn't
+# it appears in the command terminal right before "No hablo queso!" appears on a website
 
 from flask import Flask
 app = Flask(__name__) #create instance of class Flask
