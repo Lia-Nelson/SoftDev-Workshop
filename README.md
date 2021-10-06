@@ -3,7 +3,7 @@
 ## Tips and Tricks
 
 #### Headings
-**Template:**
+**Template:**  
 '''  
 Julia Nelson, Oscar Wang, Owen Yaggy  
 SoftDev  
