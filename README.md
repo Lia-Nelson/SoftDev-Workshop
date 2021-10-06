@@ -8,6 +8,10 @@
 * **rm** removes a file
 * **rm -r** will remove a directory and its contents
 * **rmdir** will remove only empty directories
+* **~** refers to a user's root directory
+* **..** refers to the smallest encompassing directory
+
+#### GitHub Related
 * **git clone *link*** will create a clone of the specified items onto your computer
 * **git pull** allows you to retrieve the latest version of those items
 * **git status** tells you if you have anything on your local machine that will not be reconciled with what is on your GitHub when you commit
