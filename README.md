@@ -4,12 +4,12 @@
 
 #### Headings
 **Template:**
-'''
-Julia Nelson, Oscar Wang, Owen Yaggy
-SoftDev
-K10 -- Putting Little Pieces Together
-2021-10-05
-'''
+>'''
+>Julia Nelson, Oscar Wang, Owen Yaggy
+>SoftDev
+>K10 -- Putting Little Pieces Together
+>2021-10-05
+>'''
 
 ### Command Terminal
 * **ssh jnelson20@149.89.160.130** will allow remote access the files on a lab computer
