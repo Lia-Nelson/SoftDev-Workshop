@@ -2,6 +2,15 @@
 
 ## Tips and Tricks
 
+#### Headings
+**Example:**  
+'''  
+Julia Nelson, Oscar Wang, Owen Yaggy  
+SoftDev  
+K10 -- Putting Little Pieces Together  
+2021-10-05  
+'''
+
 ### Command Terminal
 * **ssh jnelson20@149.89.160.130** will allow remote access the files on a lab computer
 * **ls** will list the files in a directory
@@ -10,6 +19,7 @@
 * **rmdir** will remove only empty directories
 * **~** refers to a user's root directory
 * **..** refers to the smallest encompassing directory
+* **cat *file*** tells you what is in a file
 
 #### GitHub Related
 * **git clone *link*** will create a clone of the specified items onto your computer
