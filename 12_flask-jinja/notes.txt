@@ -5,6 +5,9 @@ K12 -- ...or The Only Constant is Change?
 2021-10-07
 '''
 
+What is render_template? (app.py)
+Does {% %} indicate the use of python within html? (model_tmplt.html)
+
 Flask is configuring the Jinja2 template engine for you
 
 Predictions:
