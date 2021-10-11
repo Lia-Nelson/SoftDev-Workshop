@@ -1,25 +1,11 @@
-'''
-Julia Nelson, Oscar Wang, Owen Yaggy
-SoftDev
-K12 -- ...or The Only Constant is Change?
-2021-10-07
-'''
+# Duckfish - Gavin McGinley, Julia Nelson, Tami Takada
+# SoftDev
+# K13 -- Template for Success - We created a template to display a list of occupations and one selected occupation.
+# 2021-10-10
 
-What is render_template? (app.py)
-Does {% %} indicate the use of python within html? (model_tmplt.html)
+# EGO
+It is important to separate your work from the way that you value yourself, as we are all capable (and frequently make) mistakes.
+If your image of yourself creates a cognitive dissonance with fallibility, then you will struggle to take criticism and thus produce an inferior product.
 
-Flask is configuring the Jinja2 template engine for you
-
-Predictions:
-
-Q0: If you remove the render_template flask will not import the package that is uses to render templates, you will not be able to use the render_template() method
-
-Q1: The url will http://localhost:5000//my_foist_template
-
-Q2: a. The template to render is indicated as 'model_tmplt.html' (it will be searched for in the template folder
-b. The variable foo is assigned the value of "fooooo"
-c. collection = coll is used to indicate that that within the python %for item in collection% the collection is specified as the list coll
-
-Corrections:
-
-Q0: loading the page at localhost:5000//my_foist_template caused an internal server error (because of the package not being imported)
+# Running webistes out of the lab comupters
+In order to run the websites outside of the computer labs, make sure that your own computer has flask downloaded and a copy of the necessary files.
