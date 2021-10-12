@@ -28,6 +28,7 @@ def read_occupations(filename: str) -> dict:
 
 
 def choose_from_dict(occupations: dict) -> str:
+    """ returns a single, random occupation """
     job_classes = list(occupations.keys())
     percentages = list(occupations.values())
 
@@ -38,6 +39,7 @@ app = Flask(__name__)
 
 @app.route("/occupyflaskst")
 def get_occupations_page():
+    """ returns a heading, a table with the weighted percentages, and a random selected occupation """
     collection = read_occupations("data/occupations.csv")
     
     return render_template(
