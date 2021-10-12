@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<!-- 
-  Duckfish - Gavin McGinley, Julia Nelson, Tami Takada
-  SoftDev
-  K13 -- Template for Success - We created a template to display a list of occupations and one selected occupation.
-  2021-10-10 -->
 
 <html>
 
   <head>
-    <title> {{ title }} </title>
+    <title> {{ header }} </title>
+    <h3>
+    Duckfish - Gavin McGinley, Julia Nelson, Tami Takada<br>
+    K13 - Template for Success - We created a template to display a list of occupations and one selected occupation<br>
+    2021-12-10
+    </h3>
   </head>
 
   <body>
-    Selected Occupation Is:
-     {{ item }}
-     <br>
+    <h1> Selected Occupation Is: {{randomoc}}</h1>
+    <table>
+      <tr>
+        <th>Occupation</th>
+        <th>Weighted Percentage</th>
+      </tr>
+      {% for item in collection.keys() %}
+      <tr>
+        <td>{{item}}</td>
+        <td>{{ collection[item] }}</td>
+      </tr>
     {% endfor %}
+    </table>
   </body>
 
 </html>
-
