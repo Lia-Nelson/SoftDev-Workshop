@@ -26,6 +26,7 @@ K10 -- Putting Little Pieces Together
 * **git pull** allows you to retrieve the latest version of those items
 * **git status** tells you if you have anything on your local machine that will not be reconciled with what is on your GitHub when you commit
 * **git add** will allow you to add items to be reconciled with GitHub
+* * **git add .** will add all items to be reconciled with GitHub
 * **git rm** will allow you to remove items to be reconciled with GitHub
 * **git commit -m *"Message"*** will commit changes to the local version of GitHub
 * **git push** will put the changes on your local machine onto GitHub
