@@ -1,26 +1,19 @@
-#name02 - Renggeng Zheng, Julia Nelson, Ivan Lam (Ducky: Inkwell, Dahlia, Charizard)
+#Team02 - Renggeng Zheng Ivan Lam Lia Nelson
 #SoftDev
-#K14 -- Flask Day 04 (probably) Forms!
-#2021-10-14
+#K15 -- Session Greetings -- Usernames and Passwords
+#2021-10-18
 
-The website will store a cache of relevant information - this will impact whether having Flask methods such as 'GET' or 'POST' will cause a website malfunction because said information may already be stored for convencience. Thus, make sure to clear you cache to determine the impact that those functions have.
+request.args = what's in the url
+-- if you get
+request.form = what's in the form
+-- if you post
+The above are functionally the same sans get puts your entries in the URL.
 
-Software development seems to use a lot of mail metaphors (i.e. 'GET' and 'POST').
+Empty templates don't render.
+How to create session object?
+https://pythonbasics.org/flask-cookies/
 
-TML:
-* <form action="/auth">
-	* when form is submitted it invokes the /auth route
-
-Python:
-* @app.route("/", methods = ["GET", "POST"])
-	* on by default
-	* "GET" means ability to access the function
-	* "POST" means ability to respond as the function
-* app
-	* prints the server stats
-* request
-	* thing telling the server "hey, do this for me"
-	*  request.args
-		* the arguments of the request as a dictionary. Usually are form responses
-	* request.headers
-		* A request's shipping label/letter header. A request is basically a big box of mail, the header is the thing the post service uses to deliver the mail and identify the sender.
+app.secret_key = <randomly generate on ALPHANUMERIC STRING>
+ * e.g. os.random(32)
+ ** never store key in public repo, because it's the cryptographic key and if you do bye bye passwords
+ ** session.pop(KEY) <- rm session data
