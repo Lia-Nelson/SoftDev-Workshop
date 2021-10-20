@@ -1,65 +1,58 @@
-#name02 - Renggeng Zheng, Julia Nelson, Ivan Lam (Duckies: Inkwell, Dahlia, Charizard)
+#Team02 - Renggeng Zheng Ivan Lam Lia Nelson
 #SoftDev
-#K14 -- Flask Day 04 (probably) Forms!
-#2021-10-14
+#K15 -- Session Greetings -- Usernames and Passwords
+#2021-10-18
 
+from flask import Flask, render_template, request, session
+import os
 
-from flask import Flask						 #facilitate flask webserving
-from flask import render_template	 #facilitate jinja templating
-from flask import request					 #facilitate form submission
+server = Flask(__name__)
+server.secret_key = os.urandom(32)
+header = """#Team02 - Renggeng Zheng Ivan Lam Lia Nelson"""
 
-#the conventional way:
-#from flask import Flask, render_template, request
+passwords = {"admin": "admin"}
 
-app = Flask(__name__)		#create Flask object
+@server.route('/', methods=["GET"])
+def main():
+	'''displays login page'''
+	if 'u_name' not in session: # not logged in
+		return render_template("login.html", header=header) # renders our login with our header
+	else:
+		return render_template('response.html', header=header, username = session["u_name"])
 
+@server.route('/auth', methods=["POST", "GET"])
+def authenticate():
+	'''autenticates login info'''
+	try:
+		if request.method != "POST": #makes sure data is not sent in the url
+			return login_error("Wrong method used to access login. Must use POST")
+		if request.form["u_name"] in passwords and passwords[request.form["u_name"]] == request.form["p_word"]: #pretty sure we should hash the password but this is a proof of concept for the login.
+			set_login_cookie()
+			return render_template("response.html", header=header, username = request.form["u_name"]) # user greeting + our header
+		else:
+			if request.form["u_name"] not in passwords:
+				return login_error("User does not exist.")
+			elif passwords[request.form["u_name"]] != request.form["p_word"]:
+				return login_error("Password is wrong.")
+			else:
+				return login_error("Your login credentials are super wrong.")
+	except: #catches uncaught errors
+		return render_template("login.html", header=header, login_status="Unknown error occured")
 
-'''
-trioTASK:
-~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
-...read for understanding all of the code below.
-Some will work as written; other sections will not. Can you predict which?
-Devise some simple tests you can run to "take apart this engine," as it were.
-Execute your tests. Process results.
-PROTIP: Insert your own in-line comments wherever they will help your future self and/or current teammates understand what is going on.
-'''
+def login_error(error: str):
+	return render_template("login.html", header=header, login_status=error)
 
-@app.route("/") #, methods=['GET', 'POST']) #default variables
-#disabling GET means you can't request this function.
-#Disabling POST you CAN request the function BUT it's not allowed to return anything (or does not know how).
-def disp_loginpage():
-		print("\n\n\n")
-		print("***DIAG: this Flask obj ***")
-		print(app) # the servers
-		print("***DIAG: request obj ***")
-		print(request) #object the server gets whenever it is pinged
-		print("***DIAG: request.args ***")
-		print(request.args) #dict of inputs (all inputs)
-		#print("***DIAG: request.args['username']	***")
-		#print(request.args['username'])
-		print("***DIAG: request.headers ***")
-		print(request.headers) # request shipping label. A request is basically a big box of mail, the header is the thing the post service uses to deliver the mail.
-		return render_template( 'login.html' )
+def set_login_cookie(): #pass in a template to get cookies
+	if request.method == "POST": #check in case we call this elsewhere
+		session["u_name"] = request.form["u_name"] #login cookie set
 
-
-@app.route("/auth") # , methods=['GET', 'POST'])
-def authenticate(): # runs when a form is submitted
-		print("\n\n\n")
-		print("***DIAG: this Flask obj ***")
-		print(app)
-		print("***DIAG: request obj ***")
-		print(request)
-		print("***DIAG: request.args ***")
-		print(request.args) #request.args has the form data in the form of a dictionary
-		#print("***DIAG: request.args['username']	***")
-		#print(reque0st.args['username'])
-		print("***DIAG: request.headers ***")
-		print(request.headers)
-		return render_template('response.html', username = request.args['username'], request = request)	#response to a form submission
-
-
+@server.route('/logout', methods=["POST"])
+def logout():
+	if request.method == "POST":
+		session.pop("u_name")
+	return render_template("login.html", header=header)
 
 if __name__ == "__main__": #false if this file imported as module
-		#enable debugging, auto-restarting of server when this file is modified
-		app.debug = True
-        app.run()
+	#enable debugging, auto-restarting of server when this file is modified
+	server.debug = True
+	server.run()
