@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# Goofy Goobers: Julia Nelson, Oscar Wang, Owen Yaggy
 # SoftDev
-# Oct 2021 
+# K11: Some Things Never Change
+# 2021-10-06
 
 # DEMO 
 # basics of /static folder
