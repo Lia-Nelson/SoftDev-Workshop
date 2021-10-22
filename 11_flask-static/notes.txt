@@ -15,3 +15,4 @@ Observations for foo:
 
 Observations for foo.html:
 - booting up localost:5000 loaded the contents of foo.html as a webpage
+- text shows up as plaintext
