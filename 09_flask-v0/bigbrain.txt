@@ -1,6 +1,6 @@
 Julia Nelson + Dahlia, Oscar Wang + Alfred 
 SoftDev
-K09: Simple Path to Greatness 
+K09 - Becoming Familiar with Flask
 2021-10-03
 
 Q0:
