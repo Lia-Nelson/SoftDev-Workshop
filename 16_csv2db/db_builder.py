@@ -2,6 +2,7 @@
 #SoftDev
 #K16 -- Relational Databases -- SQLite
 #2021-10-20
+#Time Spent: 7.5 People Hours
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
@@ -19,7 +20,7 @@ def create_table(name: str, fields: dict) -> None:
 	fields is a dict mapping a field name to its attributes'''
 	fields = tuple(fields.items()) #converts fields to a tuple for easy access
 
-	cmd = f"CREATE TABLE {name}("#starter command for row creation
+	cmd = f"CREATE TABLE IF NOT EXISTS {name}("#starter command for row creation
 	for i in range(len(fields)): #iterate through fields by index
 		cmd += f"{fields[i][0]} {fields[i][1]}"
 		if i != (len(fields) - 1): #if this is not the last element in the list, add a comma
@@ -28,7 +29,7 @@ def create_table(name: str, fields: dict) -> None:
 			cmd += ");"
 	c.execute(cmd)
 
-def fill_table(table: str, filename: str, headers: dict = None) -> None:
+def fill_table(table: str, filename: str) -> None:
 	'''table = table you want to fill
 	filename = csv you're importing
 	headers = dict matching csv header names to field header names'''
@@ -36,27 +37,14 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 	with open(filename, "r") as file: #opens csv file as variable file
 		dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
 		dr = tuple(dr) #so we can subscript it
-		csv_headers = None;
-		sql_fields = None
-
-		if headers == None:
-			csv_headers = tuple(dr[0].keys())# gets header by checking the keys of the firt element of the DictReader.
-			sql_fields = "(" #generates the sql_fields we'll feed to the command
-			for i in range(len(csv_headers)):
-				sql_fields += csv_headers[i]
-				if i != (len(csv_headers) - 1): # if its not the last element, add a comma
-					sql_fields += ", "
-				else:
-					sql_fields += ")"
-		else:
-			csv_headers = tuple(dr[0].keys())# gets header by checking the keys of the firt element of the DictReader.
-			sql_fields = "(" #generates the sql_fields we'll feed to the command
-			for i in range(len(csv_headers)):
-				sql_fields += headers[csv_headers[i]]
-				if i != (len(csv_headers) - 1): # if its not the last element, add a comma
-					sql_fields += ", "
-				else:
-					sql_fields += ")"
+		csv_headers = tuple(dr[0].keys())# gets header by checking the keys of the firt element of the DictReader.
+		sql_fields = "(" #generates the sql_fields we'll feed to the command
+		for i in range(len(csv_headers)):
+			sql_fields += csv_headers[i]
+			if i != (len(csv_headers) - 1): # if its not the last element, add a comma
+				sql_fields += ", "
+			else:
+				sql_fields += ")"
 
 		for entry in dr: #for every entry in the DictReader
 			values = "("
@@ -71,9 +59,22 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 					values += ", "
 				else:
 					values += ")"
-
-			c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
-
+			if not exists(table, entry):
+				c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
+def exists(table: str, record: dict) -> bool: # checks if a record already exists
+	where_query = "";
+	for field, value in record.items():
+		where_query += field #adds field to where_query
+		if type(value) is str: #adds quotes to query for strings for equality checks
+			where_query += f" = \"{value}\""
+		else:
+			where_query += f" = {value}"
+		where_query += " AND " #connects elements
+	where_query = where_query[0:-5] # strips last AND
+	# print(where_query)
+	c.execute(f"SELECT COUNT(1) FROM {table} WHERE {where_query}")
+	# print(c.fetchone()[0])
+	return c.fetchone()[0] != 0 #if it does not exist, it returns 0 from fetchone()
 #creates roster of students
 create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 fill_table("roster", "students.csv")
