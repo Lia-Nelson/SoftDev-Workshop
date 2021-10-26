@@ -1,1 +1,15 @@
+#Team02 - Renggeng Zheng Ivan Lam Lia Nelson
+#SoftDev
+#K17 -- The full stack -- making a wiki
+#2021-10-25
+#Time Spent: 3 People Hours
 
+Note:
+According to SO, relational databases are unable to store lists of values unless you serialize them (convert them into byte code)
+	- this is annoying as we now can't get unlimited of any field, or if we want to, we cannot do any meaningful SQL operations like sorting.
+ 
+Should we be creating our own pages, or linking to preexisting ones (i.e. Wikipedia)?
+
+Spending the time to focus on a design and assigning roles ensures that work is distributed fairly and that everyone gets to contribute input to the final product.
+
+* Make sure to use PROTIPS found on Piazza for SQLite (etc.)
