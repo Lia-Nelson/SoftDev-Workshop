@@ -30,4 +30,4 @@ K10 -- Putting Little Pieces Together
 * **git rm** will allow you to remove items to be reconciled with GitHub
 * **git commit -m *"Message"*** will commit changes to the local version of GitHub
 * **git push** will put the changes on your local machine onto GitHub
-* * **git checkout *branch*** will move from current branch to branch *branch*
+* **git checkout *branch*** will move from current branch to branch *branch*
