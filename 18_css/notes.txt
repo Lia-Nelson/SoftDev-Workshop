@@ -20,4 +20,4 @@ List style for lists
 
 Padding removes indents
 
-Looked at group wandering wolverines' code (used to figure out how to format unordered lists).
+Looked at group wandering wolverines' code (used to figure out how to format unordered lists, also borrowed some formatting choices within html code).
