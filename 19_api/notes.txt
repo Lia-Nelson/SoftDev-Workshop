@@ -1,0 +1,18 @@
+Orange - Julia (Lia) Nelson, Lucas (LTW) Tom-Wong
+SoftDev
+K19 -- A RESTful Journey Skyward
+2021-11-23
+time spent: 2.3 hours
+
+api key used to detect user who wants to access data and make sure nothing breaks
+? breaks url and the query string
+json -> important
+json.dump -> dict to file, json.load -> files to dict
+
+GET (must have caps) + url
+such as: GET https://api.nasa.gov/planetary/apod?api_key=BbBUhlazreBfN6DQvmGnAp6TcuBzsfUQJISPj1hK
+inside of terminal
+its a http GET request
+returns what website sends in response to request
+
+NEEDS Certificate which I don't have, therefore urlrequest fails when I try to use it
