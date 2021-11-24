@@ -1,12 +1,23 @@
-<    style="">   <    >
+Lucas (LTW) Tom-Wong, Julia (Lia) Nelson
+SoftDev
+K18 -- Comic Sans Syndrome
+2021-11-22
 
-<h1></h1>
-<h2 class="blarb"> </h2>
-<style>
-  h1 {
+https://www.lipsum.com/
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
 
-  }
-  .blarb {
+Inline:
+Declares stylization that will affect only a single html element.
 
-  }
-</style>
+Internal
+A spreadsheet but already inside the html file. Therefore you don't need to link the css file to the html file.
+<style></style> are used to indicate that css is written in between.
+
+External:
+Uses an external css file in order to import stylizations. Apparently this is extremely common. This also allows for standardized styling. Requires link to the css spreadsheet in the html file.
+
+List style for lists
+
+Padding removes indents
+
+Looked at group wandering wolverines' code (used to figure out how to format unordered lists).
