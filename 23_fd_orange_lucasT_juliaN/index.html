@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Little Foundation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Our Little Foundation</h1>
+    <h3>Getting some foundation in Foundation</h3>
+    <h6>by Team Orange</h6>
+    <br>
+
+    <h2>Beware the Red Button!</h2>
+    <div class="large-4 medium-6 cell">
+      <a href="https://www.stuycs.org/softdev-mykolyk/assignments/" class="alert button">All Devos Must Fear</a><br/>
+    </div>
+    <br>
+
+    <h2>Select your favorite!</h2>
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <label>Select Your Favorite</label>
+        <select>
+          <option value="apples">Apples</option>
+          <option value="oranges">Oranges</option>
+          <option value="pears">Pears</option>
+          <option value="grapes">Grapes</option>
+        </select>
+        <a class="button">Submit</a><br/>
+        <p>Just kidding, nobody cares about your opinion :)</p>
+      </div>
+    </div>
+
+<!-- GRIDS -->
+<h4>Grids</h4>
+The following are sections with a width of x "cells." This adjusts to whatever the screen size is.
+    <br>
+    Cells are one of the features of foundation and so they do not require any other links.
+    <br>
+
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="primary callout">
+          <p>This is a twelve cell section in a grid-x. </p>
+        </div>
+      </div>
+    </div>
+    The class for these 6-cell sections is: "large-6 medium-6 cell," where 6 refers to the number of cells and large/medium refers to the size of the screen.
+    <br>
+    You may adjust how many cells you'd like a section to be on a larger/smaller screen.
+    <div class="grid-x grid-padding-x">
+      <div class="large-6 medium-6 cell">
+        <div class="primary callout">
+          <p>Six cell</p>
+        </div>
+      </div>
+      <div class="large-6 medium-6 cell">
+        <div class="primary callout">
+          <p>Six cell</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+      <div class="large-4 medium-4 small-4 cell">
+        <div class="primary callout">
+          <p>Four cell</p>
+        </div>
+      </div>
+      <div class="large-4 medium-4 small-4 cell">
+        <div class="primary callout">
+          <p>Four cell</p>
+        </div>
+      </div>
+      <div class="large-4 medium-4 small-4 cell">
+        <div class="primary callout">
+          <p>Four cell</p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+<!-- FORMS -->
+  <h4>Forms</h4>
+  <form>
+    These are text inputs within divs with the class "large-4 medium-4 cell".
+    <div class="grid-x grid-padding-x">
+      <div class="large-4 medium-4 cell">
+        <label>Input Label</label>
+        <input type="text" placeholder="name" />
+      </div>
+      <div class="large-4 medium-4 cell">
+        <label>Input Label</label>
+        <input type="password" placeholder="large-4.cell" />
+      </div>
+      This is a text input with class "input-group-field" and a span with class "input-group-label" within a div with class "input-group".
+      Input group allows extra text or controls to be added to the input.
+      <div class="large-4 medium-4 cell">
+        <div class="grid-x">
+          <label>Input Label</label>
+          <div class="input-group">
+            <input type="text" placeholder="website" class="input-group-field" />
+            <span class="input-group-label">.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    This is a select menu, which allows the user to choose from multiple options. To make the select menu, "option" tags with values are put within a "select" tag.
+
+    This is a radio form made using input type "radio". Only one choice can be slected.
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 medium-12 cell">
+        <label>Choose Your Favorite</label>
+        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Charmander</label>
+        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Squirtle</label>
+      </div>
+      This is a checkbox form using input type "checkbox". Multiple boxes can be checked.
+      <div class="large-12 medium-12 cell">
+        <label>To To List</label>
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Eat breakfast</label>
+        <input id="checkbox2" type="checkbox"><label for="checkbox2">Eat dinner</label>
+      </div>
+    </div>
+    This is a textarea form using the "textarea" tag.
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <label>Textarea Label</label>
+        <textarea placeholder="story"></textarea>
+      </div>
+    </div>
+  </form>
+
+  </body>
+</html>
