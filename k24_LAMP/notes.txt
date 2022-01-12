@@ -1,1 +1,24 @@
 
+## Questions
+* What version of ubuntu do we want to use? (Answered)
+* What are the additional options for droplets?
+* What are the other products that DigitalOcean offers (i.e. kubernetes)?
+
+# Comments
+* You never want to configure your box so you ssh as ROOT@droplet, you should log in as a user
+* Authentication should occur with ssh keys
+* We don't want to enable backups ($1/mo), our code will be stored on GitHub
+
+Notes about Droplets:
+
+    Choose Ubuntu 20.04 (LTS) for this class
+    Choose the Basic (shared CPU plan)
+    Pick Regular Intel and $5/mo
+    Choose a datacenter in New York
+    Use SSH keys for authentication
+
+Questions:
+
+    Should we select any additional options for our droplets?
+    What should our droplet/hostname be?
+    Can/should we use the same SSH keys as we did for GitHub?
