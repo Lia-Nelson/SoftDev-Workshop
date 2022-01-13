@@ -18,7 +18,7 @@ Comments
    allows you to switch to another user, thluffy is a placeholder
  * $CH-D
   Stands for the keystroke of Command D, allows you to exit a shell
- * apt is the application management system for Ubuntu (aptitude)
+ * apt is the application management system for Ubuntu (aptitude), and makes installs easier by also installing everything that what is being installed is dependent upon
 
 Notes about Droplets:
 
