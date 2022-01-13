@@ -18,6 +18,7 @@ Comments
    allows you to switch to another user, thluffy is a placeholder
  * $CH-D
   Stands for the keystroke of Command D, allows you to exit a shell
+ * apt is the application management system for Ubuntu (aptitude)
 
 Notes about Droplets:
 
