@@ -1,13 +1,23 @@
 
-## Questions
+Questions
 * What version of ubuntu do we want to use? (Answered)
 * What are the additional options for droplets?
 * What are the other products that DigitalOcean offers (i.e. kubernetes)?
 
-# Comments
+Comments
 * You never want to configure your box so you ssh as ROOT@droplet, you should log in as a user
 * Authentication should occur with ssh keys
 * We don't want to enable backups ($1/mo), our code will be stored on GitHub
+* $sudo apt install
+  elevates privileges to that of the superuser so that commands can be run temporarily
+* $sudo su
+  will elevate you to the root, superuser for longer
+  it will look like
+  root..$
+ * $su thluffy
+   allows you to switch to another user, thluffy is a placeholder
+ * $CH-D
+  Stands for the keystroke of Command D, allows you to exit a shell
 
 Notes about Droplets:
 
