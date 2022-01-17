@@ -14,11 +14,16 @@ Comments
   will elevate you to the root, superuser for longer
   it will look like
   root..$
- * $su thluffy
+ * $ su thluffy
    allows you to switch to another user, thluffy is a placeholder
- * $CH-D
+ * $ CH-D
   Stands for the keystroke of Command D, allows you to exit a shell
  * apt is the application management system for Ubuntu (aptitude), and makes installs easier by also installing everything that what is being installed is dependent upon
+ * LAMP stack:
+  * linux
+  * apache
+  * MySQL (or in our case SQLite)
+  * python
 
 Notes about Droplets:
 
