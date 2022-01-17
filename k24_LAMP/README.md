@@ -32,27 +32,19 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
         1. Click on the project that contains your droplet
         1. Find your droplet
         2. Copy the numbers that appear to the right of your hostname
-15. Run `$ apt update` and `apt install apache2`
-16. Run `ufw app list` and check to see that apache has been installed
-17. Run `apt install sqlite3`
-18. Run `apt install python3`
+15. Run `$ apt update` and `$ apt install apache2`
+16. Run `$ ufw app list` and check to see that apache has been installed
+17. Run `$ apt install sqlite3`
+18. Run `$ apt install python3`
 
-#### Removing Root Access
+#### Removing Root Access (In Progress)
 
-1. Run `adduser name` to create a new user
-
--> create new user
-ssh root@your_server_ip_address
-adduser name
-
-give new user sudo perms
-usermod -aG sudo name
-
-switch user (switches to name)
-su - name
-
-test sudo perms
-sudo ls -la /root
+1. Open up a bash terminal
+2. SSH into your droplet using `$ ssh root@your_server_ip_address`
+3. Run `$ adduser name` to create a new user
+4. Run `$ usermod -aG sudo name` to give the new user sudo perms
+5. Run `$ su name` to switch user to name
+6. Run `$ sudo ls -la /root` to test sudo perms
 
 
 ### Resources
