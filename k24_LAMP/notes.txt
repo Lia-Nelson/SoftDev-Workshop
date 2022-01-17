@@ -20,10 +20,10 @@ Comments
   Stands for the keystroke of Command D, allows you to exit a shell
  * apt is the application management system for Ubuntu (aptitude), and makes installs easier by also installing everything that what is being installed is dependent upon
  * LAMP stack:
-   * linux
-   * apache
-   * MySQL (or in our case SQLite)
-   * python
+   linux
+   apache
+   MySQL (or in our case SQLite)
+   python
 
 Notes about Droplets:
 
