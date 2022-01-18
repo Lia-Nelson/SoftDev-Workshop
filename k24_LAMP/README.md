@@ -76,4 +76,3 @@ Accurate as of (last update): 2021-01-17
 
 #### Contributors:  
 Julia Nelson, pd1  
-Lucas Tom-Wong, pd1  
