@@ -19,19 +19,20 @@ Comments
  * $ CH-D
   Stands for the keystroke of Command D, allows you to exit a shell
  * apt is the application management system for Ubuntu (aptitude), and makes installs easier by also installing everything that what is being installed is dependent upon
+ * Piazza works best when used early to facilitate many questions and answers
  * LAMP stack:
    linux
    apache
    MySQL (or in our case SQLite)
    python
 
-Notes about Droplets:
+  Notes about Droplets:
 
-    Choose Ubuntu 20.04 (LTS) for this class
-    Choose the Basic (shared CPU plan)
-    Pick Regular Intel and $5/mo
-    Choose a datacenter in New York
-    Use SSH keys for authentication
+     Choose Ubuntu 20.04 (LTS) for this class
+     Choose the Basic (shared CPU plan)
+     Pick Regular Intel and $5/mo
+     Choose a datacenter in New York
+     Use SSH keys for authentication
 
 Questions:
 
