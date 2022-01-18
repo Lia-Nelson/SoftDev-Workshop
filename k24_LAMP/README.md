@@ -66,6 +66,8 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
 ### Resources
 * [DigitalOcean Droplets Page](https://www.digitalocean.com/products/droplets/)
 * [Sign up for the GitHub student developer pack](https://education.github.com/discount_requests/student_application)
+* [How to generate an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+* [Finding my SSH key on GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 * [How to create a new super user](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-18-04-quickstart)
 * [How to set up ssh keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04#step-2-%E2%80%94-copying-the-public-key-to-your-ubuntu-server)
 * [How to install and use sqlite](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04)
