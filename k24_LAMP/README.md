@@ -49,6 +49,7 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
 8. Run `$ nano /etc/ssh/sshd_config` and change PasswordAuthentication to yes
 9. Run '$ sudo service sshd reload'
 10. Press CH-D
+11. Run '$ ssh-copy-id username@your_server_ip_address'
 
 ### Resources
 * [DigitalOcean Droplets Page](https://www.digitalocean.com/products/droplets/)
