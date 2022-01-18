@@ -37,7 +37,7 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
 17. Run `$ apt install sqlite3`
 18. Run `$ apt install python3`
 
-#### Removing Root Access (In Progress)
+#### Removing Root Access
 
 1. Open up a bash terminal
 2. SSH into your droplet using `$ ssh root@your_server_ip_address`
@@ -67,6 +67,8 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
 * [How to create a new super user](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-18-04-quickstart)
 * [How to set up ssh keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04#step-2-%E2%80%94-copying-the-public-key-to-your-ubuntu-server)
 * [How to install and use sqlite](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04)
+* [Piazza post I found many resources on](https://piazza.com/class/kv0wqn7faux3ye?cid=137)
+* [Piazza post I followed when removing root access](https://piazza.com/class/kv0wqn7faux3ye?cid=140)
 
 ---
 
