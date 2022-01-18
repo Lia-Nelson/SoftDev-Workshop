@@ -53,6 +53,13 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
     1. This command will require password authentication
     2. Once the keys are copied, you should be able to SSH into your new username
 13. SSH into your new user by running `$ ssh username@your_server_ip_address`
+14. Run `$ sudo nano /etc/ssh/sshd_config` and change PermitRootLogin to no and PubkeyAuthentication yes
+    1. Password authentication is necessary for the command to be run successfully
+    1. This prevents SSHing directly to the root and allows sudo privileges to be assumed without password authentication
+14. Run `$ sudo nano /etc/ssh/sshd_config` and change PasswordAuthentication to no
+    2. If you are prompted for a password when trying to execute this step, make sure the previous step has been executed before continuing
+    1. This will help keep the droplet more secure
+15. 9. Run `$ sudo service sshd reload`
 
 ### Resources
 * [DigitalOcean Droplets Page](https://www.digitalocean.com/products/droplets/)
