@@ -19,8 +19,10 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
 5. Choose the Basic plan with regular intel at $5/mo
 6. Choose one of the New York datacenter regions
 7. Select SSH keys for authentication
-    1. If you already have an SSH key set up you may choose it
+    1. If you already have an SSH key set up you may choose it (it will appear as an option)
     2. If not, you may either want to copy one you have already used or create a new one
+        1. I used the same SSH key as I used for GitHub
+        2. Because I set mine up with the standard set-up, I was able to simply run `clip < ~/.ssh/id_ed25519.pub` to copy the necessary contents for the my SSH key
 8. Select no additional options
 9. Make only one droplet
 10. Create a hostname portending greatness (i.e. give all of your hostnames a particular theme)
