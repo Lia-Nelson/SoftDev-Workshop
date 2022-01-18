@@ -47,9 +47,12 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
 6. Run `$ sudo ls -la /root` to test sudo perms
 7. Press Ch-D
 8. Run `$ nano /etc/ssh/sshd_config` and change PasswordAuthentication to yes
-9. Run '$ sudo service sshd reload'
+9. Run `$ sudo service sshd reload`
 10. Press CH-D
-11. Run '$ ssh-copy-id username@your_server_ip_address'
+11. Run `$ ssh-copy-id username@your_server_ip_address`
+    1. This command will require password authentication
+    2. Once the keys are copied, you should be able to SSH into your new username
+13. SSH into your new user by running `$ ssh username@your_server_ip_address`
 
 ### Resources
 * [DigitalOcean Droplets Page](https://www.digitalocean.com/products/droplets/)
