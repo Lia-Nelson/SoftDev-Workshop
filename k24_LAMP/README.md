@@ -46,7 +46,7 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
 5. Run `$ su name` to switch user to name
 6. Run `$ sudo ls -la /root` to test sudo perms
 7. Press Ch-D
-8. Run `$ nano /etc/ssh/sshd_config` and change PubkeyAuthentication to yes
+8. Run `$ nano /etc/ssh/sshd_config` and change PasswordAuthentication to yes
 9. Run '$ sudo service sshd reload'
 10. Press CH-D
 
