@@ -59,7 +59,7 @@ Setting up a digital ocean droplet or virtual machine allows us to not just serv
 14. Run `$ sudo nano /etc/ssh/sshd_config` and change PasswordAuthentication to no
     2. If you are prompted for a password when trying to execute this step, make sure the previous step has been executed before continuing
     1. This will help keep the droplet more secure
-15. 9. Run `$ sudo service sshd reload`
+15. Run `$ sudo service sshd reload`
 
 ### Resources
 * [DigitalOcean Droplets Page](https://www.digitalocean.com/products/droplets/)
