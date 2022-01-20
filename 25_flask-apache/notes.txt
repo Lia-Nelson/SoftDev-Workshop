@@ -1,41 +1,14 @@
 
 Questions
-* What version of ubuntu do we want to use? (Answered)
-* What are the additional options for droplets?
-* What are the other products that DigitalOcean offers (i.e. kubernetes)?
+* What is the function of mod_wsgi?
+* Why can we no longer run $ sudo apt-get install python-pip and thus $ python __init__.py after Flask is installed? It seems like on our school machines we are able to run both $ python __init__.py and $ python3 __init__.py?
 
 Comments
-* You never want to configure your box so you ssh as ROOT@droplet, you should log in as a user
-* Authentication should occur with ssh keys
-* We don't want to enable backups ($1/mo), our code will be stored on GitHub
-* $sudo apt install
-  elevates privileges to that of the superuser so that commands can be run temporarily
-* $sudo su
-  will elevate you to the root, superuser for longer
-  it will look like
-  root..$
- * $ su thluffy
-   allows you to switch to another user, thluffy is a placeholder
- * $ CH-D
-  Stands for the keystroke of Command D, allows you to exit a shell
- * apt is the application management system for Ubuntu (aptitude), and makes installs easier by also installing everything that what is being installed is dependent upon
- * Piazza works best when used early to facilitate many questions and answers
- * LAMP stack:
-   linux
-   apache
-   MySQL (or in our case SQLite)
-   python
+* Sudo perms must be utilized on droplets to make directories editable to users
+* $ scp is a secure copy command that helps when copying folders to virtual machines
+* SSH shortcuts make it easier to get into a droplet
+  * I set up the shortcut for my user as $ ssh ev
+* SSH keys should be set up on all devices that will be used to prevent problems with accessing droplets
 
-  Notes about Droplets:
-
-     Choose Ubuntu 20.04 (LTS) for this class
-     Choose the Basic (shared CPU plan)
-     Pick Regular Intel and $5/mo
-     Choose a datacenter in New York
-     Use SSH keys for authentication
-
-Questions:
-
-    Should we select any additional options for our droplets?
-    What should our droplet/hostname be?
-    Can/should we use the same SSH keys as we did for GitHub?
+Concerns
+* It is important to make sure that my SSH setup is done on all devices (I should be sure to set up my shortcut on the lab machines)
