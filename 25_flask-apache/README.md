@@ -39,6 +39,8 @@ lia@el-viento:/var/www/09_flask-v0/09_flask-v0$ sudo a2ensite 09_flask-v0
 Enabling site 09_flask-v0.
 To activate the new configuration, you need to run:
   systemctl reload apache2
+  lia@el-viento:/var/www/09_flask-v0/09_flask-v0$ cd ..
+lia@el-viento:/var/www/09_flask-v0$ sudo nano 09_flask-v0.wsgi
 
 ### Resources
 * [How to set up SSH shortcuts (to make it easier to SSH into that user with sudo perms)](https://piazza.com/class/kv0wqn7faux3ye?cid=169)
