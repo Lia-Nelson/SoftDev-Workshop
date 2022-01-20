@@ -33,6 +33,12 @@ Deploying a flask app on our droplet allows us to run various applications using
 14. Install Flask by running `$ sudo pip install Flask`
 15. Edit your flask app using `$ nano __init__.py` so that `app.run()` has `host='0.0.0.0'` and `port='abcde'` as its parameters where abcde is a five digit number
 16. Run your python file by running `$ python3 __init__.py`
+17. lia@el-viento:/var/www/09_flask-v0/09_flask-v0$ sudo nano /etc/apache2/sites-available/09_flask-v0.conf
+[sudo] password for lia:
+lia@el-viento:/var/www/09_flask-v0/09_flask-v0$ sudo a2ensite 09_flask-v0
+Enabling site 09_flask-v0.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
 
 ### Resources
 * [How to set up SSH shortcuts (to make it easier to SSH into that user with sudo perms)](https://piazza.com/class/kv0wqn7faux3ye?cid=169)
