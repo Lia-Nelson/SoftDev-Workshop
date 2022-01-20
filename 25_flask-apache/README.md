@@ -31,7 +31,7 @@ Deploying a flask app on our droplet allows us to run various applications using
       js/
 13. Install pip by running `$ sudo apt-get install python3-pip`
 14. Install Flask by running `$ sudo pip install Flask`
-15. Run your python file by running `python3 __init__.py`
+15. Run your python file by running `$ python3 __init__.py`
 
 ### Resources
 * [How to set up SSH shortcuts (to make it easier to SSH into that user with sudo perms)](https://piazza.com/class/kv0wqn7faux3ye?cid=169)
