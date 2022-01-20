@@ -18,7 +18,7 @@ Deploying a flask app on our droplet allows us to run various applications using
 3. Make sure mod_wsgi is enabled by running `$ sudo a2enmod wsgi`
 4. Move into the directory that will store your app by running `$ cd /var/www`
 5. Create the initial directory that will store your app by running `$ sudo mkdir <AppName>`
-6. Make the contents of that directory editable by running `$ sudo chown -R $USER:$USER <AppName>/` and `$ sudo chmod -R 777 <AppName>/`
+6. Make the contents of that directory editable by running `$ sudo chown -R $USER:$USER <AppName>/` and `$ sudo chmod -R 755 <AppName>/`
 7. Exit the droplet by pressing `Ch-D`
 8. Navigate to the folder containing folder `<AppName>/` which contains your application
 9. Secure copy it into the correct location in your droplet by running `$ scp -r <AppName>/ user@droplet.ip:/var/www/<AppName>`
