@@ -37,6 +37,8 @@ Deploying a flask app on our droplet allows us to run various applications using
 ### Resources
 * [How to set up SSH shortcuts (to make it easier to SSH into that user with sudo perms)](https://piazza.com/class/kv0wqn7faux3ye?cid=169)
 * [Commands to make sure droplets have available updates](https://piazza.com/class/kv0wqn7faux3ye?cid=167)
+* [Shows how host parameter so that the site can be accessed from other machines](https://piazza.com/class/kv0wqn7faux3ye?cid=175)
+* [Shares port parameter](https://piazza.com/class/kv0wqn7faux3ye?cid=183)
 
 ---
 
