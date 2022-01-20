@@ -9,6 +9,13 @@ Comments
 * SSH shortcuts make it easier to get into a droplet
   * I set up the shortcut for my user as $ ssh ev
 * SSH keys should be set up on all devices that will be used to prevent problems with accessing droplets
+* The permissions mode/configuration/flags:
+ * 9 bits _ _ _ | _ _ _ | _ _ _ user, group, world   r w x, r, w, x, r, w, x (1 or 0)
+ * run `$ ls -al` to check permissions
+ * run `$ chmod` to change permissions, (e.g. `$ chmod 770 <file>` (first, second, and third grouping but gets converted to base 2))
+ * run `$ chgroup <user> <file>` to change permissions
+* `$ top` gives a live feed of processes, hit q to quit
+* www-data is apache, can do `$ chown <user> <file>`
 
 Concerns
 * It is important to make sure that my SSH setup is done on all devices (I should be sure to set up my shortcut on the lab machines)
