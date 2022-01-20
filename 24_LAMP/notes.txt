@@ -3,6 +3,9 @@ Questions
 * What version of ubuntu do we want to use? (Answered)
 * What are the additional options for droplets?
 * What are the other products that DigitalOcean offers (i.e. kubernetes)?
+* Should we select any additional options for our droplets? (Answered)
+* What should our droplet/hostname be? (Answered)
+* Can/should we use the same SSH keys as we did for GitHub? (Answered)
 
 Comments
 * You never want to configure your box so you ssh as ROOT@droplet, you should log in as a user
@@ -34,8 +37,5 @@ Comments
      Choose a datacenter in New York
      Use SSH keys for authentication
 
-Questions:
-
-    Should we select any additional options for our droplets?
-    What should our droplet/hostname be?
-    Can/should we use the same SSH keys as we did for GitHub?
+Concerns:
+* Droplet subscriptions should be cancelled at the end of the course if they are no longer in use (to enable SPEND NO MONEY)
