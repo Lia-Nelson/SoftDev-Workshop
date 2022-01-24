@@ -31,7 +31,7 @@ Deploying a flask app on our droplet allows us to run various applications using
 --| js/  
 13. Install pip by running `$ sudo apt-get install python3-pip`
 14. Install Flask by running `$ sudo pip install Flask`
-15. Edit your flask app using `$ nano __init__.py` so that `app.run()` has `host='0.0.0.0'` and `port='abcde'` as its parameters where abcde is a five digit number
+15. Edit your flask app using `$ nano __init__.py` so that `app.run()` depends on the conditional `if __name__ == "__main__":`
 16. Run your python file by running `$ python3 __init__.py`
 17. lia@el-viento:/var/www/09_flask-v0/09_flask-v0$ sudo nano /etc/apache2/sites-available/09_flask-v0.conf
 [sudo] password for lia:
