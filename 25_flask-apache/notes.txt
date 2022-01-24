@@ -16,6 +16,7 @@ Comments
  * run `$ chgroup <user> <file>` to change permissions
 * `$ top` gives a live feed of processes, hit q to quit
 * www-data is apache, can do `$ chown <user> <file>`
+* Running `chown -R USER:GROUP DIRECTORY` changes ownership of a given directory and all files and directories under that given directory
 
 Concerns
 * It is important to make sure that my SSH setup is done on all devices (I should be sure to set up my shortcut on the lab machines)
