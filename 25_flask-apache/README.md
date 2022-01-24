@@ -35,7 +35,7 @@ Deploying a flask app on our droplet allows us to run various applications using
 16. Run your python file by running `$ python3 __init__.py`
 17. Configure and enable virtual host (note again that all the FlaskApp -> <your_new_name>)
    ```
-   sudo nano /etc/apache2/sites-available/FlaskApp.conf
+   $ sudo nano /etc/apache2/sites-available/FlaskApp.conf
    ```
    Change mywebsite.com to the IP, and FlaskApp to name of your flask app
    ```
@@ -59,14 +59,18 @@ Deploying a flask app on our droplet allows us to run various applications using
    ```
    Enable Virtual Host
    ```
-   sudo a2ensite FlaskApp
+   $ sudo a2ensite FlaskApp
+   ```
+   Activate the new configuration
+   ```
+   $ systemctl reload apache2
    ```
 18. Create WSGI file 
    ```
-   cd /var/www/FlaskApp
+   $ cd /var/www/FlaskApp
    ```
    ```
-   sudo nano flaskapp.wsgi 
+   $ sudo nano flaskapp.wsgi 
    ```
    ```
    #!/usr/bin/python
@@ -80,7 +84,7 @@ Deploying a flask app on our droplet allows us to run various applications using
    ```
 19. Apply changes
    ```
-   sudo service apache2 restart 
+   $ sudo service apache2 restart 
    ```
 You should be able to access your virtual host at your ip.
 
