@@ -33,15 +33,56 @@ Deploying a flask app on our droplet allows us to run various applications using
 14. Install Flask by running `$ sudo pip install Flask`
 15. Edit your flask app using `$ nano __init__.py` so that `app.run()` depends on the conditional `if __name__ == "__main__":`
 16. Run your python file by running `$ python3 __init__.py`
-17. lia@el-viento:/var/www/09_flask-v0/09_flask-v0$ sudo nano /etc/apache2/sites-available/09_flask-v0.conf
-[sudo] password for lia:
-lia@el-viento:/var/www/09_flask-v0/09_flask-v0$ sudo a2ensite 09_flask-v0
-Enabling site 09_flask-v0.
-To activate the new configuration, you need to run:
-  systemctl reload apache2
-  lia@el-viento:/var/www/09_flask-v0/09_flask-v0$ cd ..
-lia@el-viento:/var/www/09_flask-v0$ sudo nano 09_flask-v0.wsgi
-sudo service apache2 restart 
+17. Configure and enable virtual host (note again that all the FlaskApp -> <your_new_name>)
+   ```
+   sudo nano /etc/apache2/sites-available/FlaskApp.conf
+   ```
+   Change mywebsite.com to the IP, and FlaskApp to name of your flask app
+   ```
+   <VirtualHost *:80>
+		ServerName mywebsite.com
+		ServerAdmin admin@mywebsite.com
+		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
+		<Directory /var/www/FlaskApp/FlaskApp/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		Alias /static /var/www/FlaskApp/FlaskApp/static
+		<Directory /var/www/FlaskApp/FlaskApp/static/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		LogLevel warn
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+   </VirtualHost>
+   ```
+   Enable Virtual Host
+   ```
+   sudo a2ensite FlaskApp
+   ```
+18. Create WSGI file 
+   ```
+   cd /var/www/FlaskApp
+   ```
+   ```
+   sudo nano flaskapp.wsgi 
+   ```
+   ```
+   #!/usr/bin/python
+   import sys
+   import logging
+   logging.basicConfig(stream=sys.stderr)
+   sys.path.insert(0,"/var/www/FlaskApp/")
+
+   from FlaskApp import app as application
+   application.secret_key = 'Add your secret key'
+   ```
+19. Apply changes
+   ```
+   sudo service apache2 restart 
+   ```
+You should be able to access your virtual host at your ip.
 
 ### Resources
 * [How to set up SSH shortcuts (to make it easier to SSH into that user with sudo perms)](https://piazza.com/class/kv0wqn7faux3ye?cid=169)
