@@ -25,10 +25,10 @@ Deploying a flask app on our droplet allows us to run various applications using
 10. SSH back into the account with sudo access
 11. Enter the folder containing your application by running `$ cd /var/www/<AppName>/<AppName>`
 12. Use a file editor to make sure that the contents of your folder have the following structure:  
-    __init__.py  
-    static/  
-      css/  
-      js/  
+__init__.py  
+static/  
+  css/  
+  js/  
 13. Install pip by running `$ sudo apt-get install python3-pip`
 14. Install Flask by running `$ sudo pip install Flask`
 15. Edit your flask app using `$ nano __init__.py` so that `app.run()` has `host='0.0.0.0'` and `port='abcde'` as its parameters where abcde is a five digit number
