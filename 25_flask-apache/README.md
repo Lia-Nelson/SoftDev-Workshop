@@ -93,6 +93,8 @@ You should be able to access your virtual host at your ip.
 * [Commands to make sure droplets have available updates](https://piazza.com/class/kv0wqn7faux3ye?cid=167)
 * [Shows how host parameter so that the site can be accessed from other machines](https://piazza.com/class/kv0wqn7faux3ye?cid=175)
 * [Shares port parameter](https://piazza.com/class/kv0wqn7faux3ye?cid=183)
+* [Tutorial referenced](https://github.com/ElizaKnapp/workshop-repo/blob/main/25_flask-apache/README.md)
+* Mr. Mykolyk, LTW and Qina Liu (who helped answer my questions)
 
 ---
 
