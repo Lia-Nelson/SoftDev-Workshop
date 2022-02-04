@@ -1,0 +1,16 @@
+Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
+SoftDev pd0
+K27 -- Basic functions in JavaScript
+2022-02-03r
+
+DISCO
+-----------------------------------------------------------------
+* Files will run on DrRacket whether their ending is .rkt or .scm
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* Why...?
+* Huh?
+* Whuh now?
+=================================================================
