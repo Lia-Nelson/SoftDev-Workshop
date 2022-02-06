@@ -1,4 +1,5 @@
-Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia Nelson
+Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia (Lia)
+Nelson
 SoftDev pd1
 K27 -- Basic functions in JavaScript
 2022-02-04
@@ -6,11 +7,23 @@ K27 -- Basic functions in JavaScript
 DISCO
 -----------------------------------------------------------------
 * Files will run on DrRacket whether their ending is .rkt or .scm
+* The function(n) syntax more closely mirrors Scheme's lambda
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* Why...?
-* Huh?
-* Whuh now?
+* When might one prefer the function(n) syntax or the (n) => one?
+* Is there existing code that can be utilized to take code
+  written in one language and run it in another?
+* Incremental development can make it easier to cope with
+  programming errors such as incorrect use of semicolons (which
+  I may have some experience with)
+* While Python tends to use spacing to determine the scope of
+  statements, JavaScript tends to use brackets, parentheses, and
+  semicolons
+* After pressing Ch-Shift-K in Firefox, one can test JavaScript
+  functions by going to console and writing a function call
+* Is there a way to get changes to the JavaScript file for a site
+  to be implemented without the page being reloaded?
+* Could that cause any potential problems?
 =================================================================
