@@ -1,3 +1,8 @@
+; Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia Nelson
+; SoftDev pd1
+; K27 -- Basic functions in JavaScript
+; 2022-02-04
+
 (define fact
   (lambda (n)
     (if (= n 1)

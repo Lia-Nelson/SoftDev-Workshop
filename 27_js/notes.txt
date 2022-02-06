@@ -1,7 +1,7 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-SoftDev pd0
+Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia Nelson
+SoftDev pd1
 K27 -- Basic functions in JavaScript
-2022-02-03r
+2022-02-04
 
 DISCO
 -----------------------------------------------------------------
