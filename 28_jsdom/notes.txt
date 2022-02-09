@@ -1,0 +1,28 @@
+Team Oranges :: Ishraq Mahid, Julia Nelson
+SoftDev pd1
+K28 -- Manipulating the DOM
+2022-02-08
+
+DISCO
+-----------------------------------------------------------------
+* HTML elements can be referenced in JavaScript by their element
+  id
+* JavaScript functions can be referenced in the console for the
+  website as well as in the JavaScript file (after all, the
+  browser is JavaScript's environment)
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* When might one want to use var over let or const to define
+  variables? When one wants to reference it beyond a local scope?
+* Is there a way to ensure that only a specific type (or type
+  equivalent (e.g. integers) can be inserted into a function?)
+* Only certain inputs will produce valid function calls (and
+  because there are no types in JavaScript it is important to
+  determine the behavior that one desires for different inputs)
+* Are there any cases in which JavaScript can permanently change
+  the inner HTML of a website?
+* Will any JavaScript animations always restart when the website
+  is reloaded?
+=================================================================
