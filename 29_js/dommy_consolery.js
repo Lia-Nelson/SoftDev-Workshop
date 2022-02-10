@@ -1,4 +1,4 @@
-// Team Oranges :: Team Apples Oranges :: Ishraq Mahid,
+// Team Apples Oranges :: Ishraq Mahid,
 // Naomi Naranjo, Julia (Lia)
 // Nelson
 // SoftDev pd1
