@@ -1,27 +1,8 @@
-/*
-   your PPTASK:
-
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-
-    		Write with your future self or teammates in mind.
-
-    		If you find yourself falling out of flow mode, consult
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-
-   (delete this block comment once you are done)
-*/
-
-// Team Oranges :: Ishraq Mahid, Julia Nelson
+// Team Oranges :: Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia (Lia)
+// Nelson
 // SoftDev pd1
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08
+// K29 -- DOMfoolery++
+// 2022-02-10
 // --------------------------------------------------
 
 
@@ -202,6 +183,7 @@ addItem("gcd(22, 11): " + gcd(22, 11));
 var fibber = document.createElement("button");
 fibber.innerHTML = "Click to fib";
 document.body.appendChild(fibber);
+//Upon click shows the result of a call to fib on page
 fibber.addEventListener("click", function()
 {
   let fibbed = document.createElement("p");
@@ -214,23 +196,36 @@ fibber.addEventListener("click", function()
 var facter = document.createElement("button");
 facter.innerHTML = "Click to fact";
 document.body.appendChild(facter);
-// facter.addEventListener("click". addFact);
+//for some reason, having addFact() as the function causes
+//it to be run each time the HTML is loaded instead of upon
+//click
+facter.addEventListener("click", addFact);
+
+//Must be declared before it is called
+//Shows the result of a call to gcd on page
+//Two alternate constructions
+// var addGcd = function() {
+//   let gcded = document.createElement("p");
+//   gcded.innerHTML = "gcd(5, 15): " + gcd(5, 15);
+//   document.body.appendChild(gcded);
+// };
+var addGcd = () => {
+  let gcded = document.createElement("p");
+  gcded.innerHTML = "gcd(5, 15): " + gcd(5, 15);
+  document.body.appendChild(gcded);
+};
 
 //Creates gcder button at bottom of HTML and gives it event
 //listener functionality
 var gcder = document.createElement("button");
 gcder.innerHTML = "Click to gcd";
 document.body.appendChild(gcder);
-// gcder.addEventListener("click". addGcd);
+gcder.addEventListener("click", addGcd);
 
-var addFact = function() {
+//May be declared after it is called
+//Shows to the result of a call to fact on page
+function addFact() {
   let facted = document.createElement("p");
   facted.innerHTML = "fact(7): " + fact(7);
   document.body.appendChild(facted);
 };
-
-// var addGcd = () => {
-//   let gcded = document.createElement("p");
-//   gcded.innerHTML = "gcd(5, 15): " + gcd(5, 15));
-//   document.body.appendChild(gcded);
-// };

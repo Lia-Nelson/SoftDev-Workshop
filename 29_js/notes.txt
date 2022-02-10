@@ -1,7 +1,8 @@
-Team Oranges :: Ishraq Mahid, Julia Nelson
+Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia (Lia)
+Nelson
 SoftDev pd1
-K28 -- Manipulating the DOM
-2022-02-08
+K29 -- DOMfoolery++
+2022-02-10
 
 DISCO
 -----------------------------------------------------------------
@@ -13,6 +14,14 @@ DISCO
 
 QCC
 -----------------------------------------------------------------
+* What is the difference between the function name {};
+  construction and the var name = function() {}; construction?
+    Why does it seem that the second of those constructions must
+    occur before the function is called whereas the first does
+    not?
+* Why did adding parentheses after the function associated with
+  an event listener cause to run each time the HTML is loaded
+  instead of upon click?
 * JavaScript code will work on standards-compliant browser
 * Developed because people want interactivity
 * Provides another doorway for hackers (getting random code from
@@ -41,4 +50,7 @@ QCC
 * element.innerHTML
 * element.appendChild(<ELEMENT>)
 * element.addEventListener(<EVENT>, <FUNCTION>)
+
+* How can we make sure that we are constructing our functions in
+  a way that is appropriate?
 =================================================================
