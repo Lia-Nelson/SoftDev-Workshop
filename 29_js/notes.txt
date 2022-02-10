@@ -5,24 +5,40 @@ K28 -- Manipulating the DOM
 
 DISCO
 -----------------------------------------------------------------
-* HTML elements can be referenced in JavaScript by their element
-  id
-* JavaScript functions can be referenced in the console for the
-  website as well as in the JavaScript file (after all, the
-  browser is JavaScript's environment)
+* Ctrl+Alt+Up/Down allows me to select multiple lines on Atom to
+  edit at once on a Windows machine
+* I can exit this lines with the Esc key
+* Elements can be appended to document.body or document.head
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* When might one want to use var over let or const to define
-  variables? When one wants to reference it beyond a local scope?
-* Is there a way to ensure that only a specific type (or type
-  equivalent (e.g. integers) can be inserted into a function?)
-* Only certain inputs will produce valid function calls (and
-  because there are no types in JavaScript it is important to
-  determine the behavior that one desires for different inputs)
-* Are there any cases in which JavaScript can permanently change
-  the inner HTML of a website?
-* Will any JavaScript animations always restart when the website
-  is reloaded?
+* JavaScript code will work on standards-compliant browser
+* Developed because people want interactivity
+* Provides another doorway for hackers (getting random code from
+  some website and running it on your machine)
+* Modern web browsers have sandboxing and added protections
+* console.log() displays a string in the console
+
+* No built in I/O (i.e. place to print to)
+
+* Dynamically typed (not strictly)
+* Even in Java where strictly typed takes a lot of resources to run
+  instanceOf (checks types)
+
+* document.getElementById(<ID>)
+* document.getElementsByTagName(<TAG>)
+* document.getElementsByClassName(<CLASS>)
+
+* JS for user action awareness:
+  .addEventListener(<EVENT>, <FUNCTION>)
+
+* document.createElement(<HTML TAG NAME>)
+* element.setAttribute(<NAME>, <VALUE>)
+* element.getAttribute(<NAME>)
+
+* element.remove()
+* element.innerHTML
+* element.appendChild(<ELEMENT>)
+* element.addEventListener(<EVENT>, <FUNCTION>)
 =================================================================

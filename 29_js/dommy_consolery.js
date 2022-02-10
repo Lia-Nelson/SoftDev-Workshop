@@ -191,9 +191,46 @@ var gcd = function(a, b) {
   else return gcd(b, (a % b));
 };
 
+//Adds list items which contains the results of one function
+//call to each of fib, fact and gcd
 addItem("fib(2): " + fib(2));
 addItem("fact(5): " + fact(5));
 addItem("gcd(22, 11): " + gcd(22, 11));
 
-var a = document.createElement("button");
-a.innerHTML = "Click Here";
+//Creates fibber button at bottom of HTML and gives it event
+//listener functionality
+var fibber = document.createElement("button");
+fibber.innerHTML = "Click to fib";
+document.body.appendChild(fibber);
+fibber.addEventListener("click", function()
+{
+  let fibbed = document.createElement("p");
+  fibbed.innerHTML = "fib(18): " + fib(18);
+  document.body.appendChild(fibbed);
+});
+
+//Creates facter button at bottom of HTML and gives it event
+//listener functionality
+var facter = document.createElement("button");
+facter.innerHTML = "Click to fact";
+document.body.appendChild(facter);
+// facter.addEventListener("click". addFact);
+
+//Creates gcder button at bottom of HTML and gives it event
+//listener functionality
+var gcder = document.createElement("button");
+gcder.innerHTML = "Click to gcd";
+document.body.appendChild(gcder);
+// gcder.addEventListener("click". addGcd);
+
+var addFact = function() {
+  let facted = document.createElement("p");
+  facted.innerHTML = "fact(7): " + fact(7);
+  document.body.appendChild(facted);
+};
+
+// var addGcd = () => {
+//   let gcded = document.createElement("p");
+//   gcded.innerHTML = "gcd(5, 15): " + gcd(5, 15));
+//   document.body.appendChild(gcded);
+// };
