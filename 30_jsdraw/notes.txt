@@ -1,56 +1,63 @@
 Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia (Lia)
 Nelson
 SoftDev pd1
-K30 -- js Draw
+K30 -- canvas based JS drawing
 2022-02-14
 
 DISCO
 -----------------------------------------------------------------
-* Ctrl+Alt+Up/Down allows me to select multiple lines on Atom to
-  edit at once on a Windows machine
-* I can exit this lines with the Esc key
-* Elements can be appended to document.body or document.head
+* Can write inline js using <style></style>!
+* TOOLBOX (when running on canvas assume on 2nd context):
+  (command, object it is run on, behavior produced)
+  * clearRect(), canvas, clears rectangular area specified by x,
+  y, width, then height parameters
+  * getElementById(), document, retrieves element
+  * addEventListener(), event target, sets up a function that
+    will be called when the specified event occurs at the target
+  * fillStyle, canvas, specifies color, gradient, or pattern
+    to use inside shapes
+  * strokeStyle(), canvas, specifies color, gradient, or pattern
+    to use for outlines (strokes) around shapes
+  * fillText(), canvas, draws text (a parameter) at specified x
+    and y with an optional maxWidth
+  * beginPath(), canvas, starts a new path so drawing may occur
+    and is called before each line
+  * arc(), canvas, creates a circular arc centered at (x, y)
+    with specified radius. Its path starts at startAngle, ends
+    at endAngle, and travels in the direction given by
+    counterclockwise (else defaults to clockwise)
+  * fill, element or animation, used define color used to paint
+    element or final state of animation
+  * stroke, object, presentation attribute defining color for
+    outline of shape
+  * Math.PI, no object, returns circumference/diameter of a
+    circle
+  * offsetX, mouse event, provides the offset in X coordinate of
+    mouse pointer between that event and the padding edge of the
+    target node
+  * offsetY mouse event, provides the offset in Y coordinate of
+    mouse pointer between that event and the padding edge of the
+    target node
+  * clientWidth, element, property is zero for inline elements
+    and elements with no CSS; otherwise, it's the inner width of
+    an element in pixels. It includes padding but excludes
+    borders, margins, and vertical scrollbars (if present)
+  * clientHeight, element, zero for elements with no CSS or
+    inline layout boxes; otherwise, it's the inner height of an
+    element in pixels. It includes padding but excludes borders,
+    margins, and horizontal scrollbars (if present). 
+  * fillRect(), canvas, draws a filled rectangle whose starting
+    point is at (x, y) and whose size is specified by width and
+    height
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* What is the difference between the function name {};
-  construction and the var name = function() {}; construction?
-    Why does it seem that the second of those constructions must
-    occur before the function is called whereas the first does
-    not?
-* Why did adding parentheses after the function associated with
-  an event listener cause to run each time the HTML is loaded
-  instead of upon click?
-* JavaScript code will work on standards-compliant browser
-* Developed because people want interactivity
-* Provides another doorway for hackers (getting random code from
-  some website and running it on your machine)
-* Modern web browsers have sandboxing and added protections
-* console.log() displays a string in the console
-
-* No built in I/O (i.e. place to print to)
-
-* Dynamically typed (not strictly)
-* Even in Java where strictly typed takes a lot of resources to run
-  instanceOf (checks types)
-
-* document.getElementById(<ID>)
-* document.getElementsByTagName(<TAG>)
-* document.getElementsByClassName(<CLASS>)
-
-* JS for user action awareness:
-  .addEventListener(<EVENT>, <FUNCTION>)
-
-* document.createElement(<HTML TAG NAME>)
-* element.setAttribute(<NAME>, <VALUE>)
-* element.getAttribute(<NAME>)
-
-* element.remove()
-* element.innerHTML
-* element.appendChild(<ELEMENT>)
-* element.addEventListener(<EVENT>, <FUNCTION>)
-
-* How can we make sure that we are constructing our functions in
-  a way that is appropriate?
+* What kinds of objects may be event targets?
+* What could a mouse event entail?
+* What is the benefit of using multiple paths for canvas?
+* When running on canvas, we will want to run on the 2d
+  rendering context
+* What would happen if the functions intended to be run on a
+  canvas element were called on a different HTML element?
 =================================================================
