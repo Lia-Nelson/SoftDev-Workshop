@@ -83,3 +83,5 @@ var stopIt = () => {
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",  stopIt );
+
+while(true) {console.log("sda")};
