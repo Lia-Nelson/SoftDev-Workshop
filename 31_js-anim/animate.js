@@ -1,87 +1,69 @@
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
-// K31 -- canvas based JS animation
-// 2022-02-15t
+// Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia
+// (Lia) Nelson
+// SoftDev pd1
+// K31 -- Paint Paint Paint...
+// 2022-02-16
 
 // model for HTML5 canvas-based animation
 
-// SKEELTON
+//rerieve node in DOM via ID
+var c = document.getElementById("playground");
+console.log(c);
 
+let move = document.getElementById("buttonCircle");
+let stop = document.getElementById("buttonStop");
 
-//access canvas and buttons via DOM
-var c = document.getElementById("playground"); // GET CANVAS
-//console.log(c);
-
-var dotButton = document.getElementById("buttonCircle"); // GET DOT BUTTON
-// console.log(dotButton);
-var stopButton = document.getElementById("buttonStop"); /// GET STOP BUTTON
-// console.log(stopButton);
-
-//prepare to interact with canvas in 2D
+//instantiate a CanvassRenderingContext2D object
 var ctx = c.getContext("2d");
-// console.log(ctx);
 
-//set fill color to team color
-ctx.fillStyle = "#c3b1e1"// YOUR CODE HERE
-// console.log(ctx);
+console.log(ctx)
+//init global state variable
+let frame = 0;
+let direction = 1;
+let formerDirection = 1;
 
-var requestID;  //init global var for use with animation frames
-// tells how to connect to next frame
-// not enquing double to rate of animation frames every time
-// press button
+//https://developer.mozilla.org/en-US/docs/Web/API/
+//Canvas_API/Tutorial/Basic_animations
 
-//var clear = function(e) {
-var clear = (e) => {
-  // do not need to start new stroke because just clearing
-  ctx.clearRect(0, 0, c.clientWidth, c.clientHeight);
-  console.log("clear invoked...")
+let draw = () => {
+    drawCircle();
 
-  // YOUR CODE HERE
+    window.requestAnimationFrame(draw);
 };
 
-
-var radius = 0;
-var growing = true;
-
-
-//var drawDot = function() {
-var drawDot = () => {
-  console.log("drawDot invoked...")
-
-  // YOUR CODE HERE
-
-  /*
-    ...to
-    Wipe the canvas,
-    Repaint the circle,
-
-    ...and somewhere (where/when is the right time?)
-    Update requestID to propagate the animation.
-    You will need
-    window.cancelAnimationFrame()
-    window.requestAnimationFrame()
-
-   */
+let drawCircle = () =>{
+    ctx.clearRect(0, 0, c.width, c.height);
+    ctx.beginPath();
+    if (frame > c.width/2 || frame < 0) {
+        direction *= -1;
+        if(frame < 0){
+            frame *= -1;
+        }
+    }
+    console.log(frame);
+    ctx.arc(c.width/2, c.height/2, frame, 0, 2 * Math.PI);
+    ctx.fillStyle = "#C3B1E1";
+    ctx.fill();
+    frame += 1 * direction;
+    if(direction != 0){
+        formerDirection = direction;
+    }
 };
 
-
-//var stopIt = function() {
-var stopIt = () => {
-  console.log("stopIt invoked...")
-  console.log( requestID );
-
-  // YOUR CODE HERE
-  /*
-    ...to
-    Stop the animation
-
-    You will need
-    window.cancelAnimationFrame()
-  */
+let pause = () => {
+    direction = 0;
 };
 
+let unpause = () => {
+    direction = formerDirection;
+};
 
-dotButton.addEventListener( "click", drawDot );
-stopButton.addEventListener( "click",  stopIt );
+let leMove = () => {
+    if(direction == 0){
+        unpause();
+    }
+};
 
-while(true) {console.log("sda")};
+move.addEventListener('click',leMove);
+stop.addEventListener('click',pause);
+draw();

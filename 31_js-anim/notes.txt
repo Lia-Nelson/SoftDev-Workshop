@@ -1,16 +1,20 @@
 Team Apples Oranges :: Ishraq Mahid, Naomi Naranjo, Julia (Lia)
 Nelson
 SoftDev pd1
-K30 -- canvas based JS drawing
-2022-02-14
+K31 -- Paint Paint Paint...
+2022-02-16
 
 DISCO
 -----------------------------------------------------------------
-* Can write inline js using <style></style>!
+* The power of animations are on our side!
+* Hex codes are not case sensitive
+* Animations work by sending multiple frames per second
+* Frames are cleared -> painted on top of -> displayed -> repeat
+* Less computationally expensive than rendering
 * TOOLBOX (when running on canvas assume on 2nd context):
   (command, object it is run on, behavior produced)
   * clearRect(), canvas, clears rectangular area specified by x,
-    y, width, then height parameters
+  y, width, then height parameters
   * getElementById(), document, retrieves element
   * addEventListener(), event target, sets up a function that
     will be called when the specified event occurs at the target
@@ -49,21 +53,24 @@ DISCO
   * fillRect(), canvas, draws a filled rectangle whose starting
     point is at (x, y) and whose size is specified by width and
     height
+  * requestAnimationFrame(), window, tells the browser that you
+    wish to perform an animation and requests that the browser
+    calls a specified function to update an animation before the
+    next repaint
+  * cancelAnimationFrame(), window, method cancels an animation
+    frame request previously scheduled
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* What kinds of objects may be event targets?
-* What could a mouse event entail?
-* What is the benefit of using multiple paths for canvas?
-* When running on canvas, we will want to run on the 2d
-  rendering context
-* event.offsetX will run in addition to e.offsetX because it
-  is a wat
-* ctx.arc(x, y, 50, 0, 360); must be run before
-  ctx.strokeStyle = 'black'; and ctx.fillStyle = 'red'; which
-  must be run before ctx.fill(); and ctx.stroke();
-* Be careful, offsetX and offsetY are case sensitive
-* What would happen if the functions intended to be run on a
-  canvas element were called on a different HTML element?
+* How can we time our program for the proper animation frame to
+  control speed of animation?
+* RequestID?
+* When would we want to save frames and restore them?
+=================================================================
+
+Useful Code & Links:
+-----------------------------------------------------------------
+* https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/
+  Tutorial/Basic_animations -> woop woop, my source
 =================================================================
