@@ -45,7 +45,7 @@ DISCO
   * clientHeight, element, zero for elements with no CSS or
     inline layout boxes; otherwise, it's the inner height of an
     element in pixels. It includes padding but excludes borders,
-    margins, and horizontal scrollbars (if present). 
+    margins, and horizontal scrollbars (if present).
   * fillRect(), canvas, draws a filled rectangle whose starting
     point is at (x, y) and whose size is specified by width and
     height
@@ -58,6 +58,12 @@ QCC
 * What is the benefit of using multiple paths for canvas?
 * When running on canvas, we will want to run on the 2d
   rendering context
+* event.offsetX will run in addition to e.offsetX because it
+  is a wat
+* ctx.arc(x, y, 50, 0, 360); must be run before
+  ctx.strokeStyle = 'black'; and ctx.fillStyle = 'red'; which
+  must be run before ctx.fill(); and ctx.stroke();
+* Be careful, offsetX and offsetY are case sensitive
 * What would happen if the functions intended to be run on a
   canvas element were called on a different HTML element?
 =================================================================
