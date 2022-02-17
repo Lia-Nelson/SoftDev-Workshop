@@ -80,6 +80,27 @@ var stopIt = () => {
   */
 };
 
+//For DVD
+//Make var imgWidth and var imgHeight
+//Also imgX imgY
+var dirX = -1;
+var dirY= -1;
+var displacement = 5;
+//Not sure about the plus one
+var imgX = Math.floor(Math.random() * (c.width - imgWidth + 1));
+var imgY = Math.floor(Math.random() * (c.height - imgHeight + 1));
+// then at intervales
+imgX += displacement * dirX;
+imgY += displacement * dirY;
+if ((imgX <= 0) || ((imgX + imgWidth) >= c.width)) {
+  dirX *= -1;
+  imgX *= -1;
+}
+if ((imgY <= 0) || ((imgY + imgHeight) >= c.height)) {
+  dirY *= -1;
+  imgY *= -1;
+}
+
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",  stopIt );
