@@ -1,0 +1,74 @@
+Team IDon'tKnow :: Michael Borczuk, Julia (Lia) Nelson
+SoftDev pd1
+K32 -- More Moving Parts
+2022-02-17
+
+DISCO
+-----------------------------------------------------------------
+* Screen savers prevent burnout for pixels (if same image stay
+  for too long burns into screen)
+* TOOLBOX (when running on canvas assume on 2nd context):
+  (command, object it is run on, behavior produced)
+  * clearRect(), canvas, clears rectangular area specified by x,
+  y, width, then height parameters
+  * getElementById(), document, retrieves element
+  * addEventListener(), event target, sets up a function that
+    will be called when the specified event occurs at the target
+  * fillStyle, canvas, specifies color, gradient, or pattern
+    to use inside shapes
+  * strokeStyle(), canvas, specifies color, gradient, or pattern
+    to use for outlines (strokes) around shapes
+  * fillText(), canvas, draws text (a parameter) at specified x
+    and y with an optional maxWidth
+  * beginPath(), canvas, starts a new path so drawing may occur
+    and is called before each line
+  * arc(), canvas, creates a circular arc centered at (x, y)
+    with specified radius. Its path starts at startAngle, ends
+    at endAngle, and travels in the direction given by
+    counterclockwise (else defaults to clockwise)
+  * fill, element or animation, used define color used to paint
+    element or final state of animation
+  * stroke, object, presentation attribute defining color for
+    outline of shape
+  * Math.PI, no object, returns circumference/diameter of a
+    circle
+  * offsetX, mouse event, provides the offset in X coordinate of
+    mouse pointer between that event and the padding edge of the
+    target node
+  * offsetY mouse event, provides the offset in Y coordinate of
+    mouse pointer between that event and the padding edge of the
+    target node
+  * clientWidth, element, property is zero for inline elements
+    and elements with no CSS; otherwise, it's the inner width of
+    an element in pixels. It includes padding but excludes
+    borders, margins, and vertical scrollbars (if present)
+  * clientHeight, element, zero for elements with no CSS or
+    inline layout boxes; otherwise, it's the inner height of an
+    element in pixels. It includes padding but excludes borders,
+    margins, and horizontal scrollbars (if present).
+  * fillRect(), canvas, draws a filled rectangle whose starting
+    point is at (x, y) and whose size is specified by width and
+    height
+  * requestAnimationFrame(), window, tells the browser that you
+    wish to perform an animation and requests that the browser
+    calls a specified function to update an animation before the
+    next repaint
+  * cancelAnimationFrame(), window, method cancels an animation
+    frame request previously scheduled
+  * Image(), N/A,  creates a new HTMLImageElement instance. It
+    is functionally equivalent to document.createElement('img').
+    Can specify width and then height.
+  * Math.random(), N/A, returns a floating-point, pseudo-random
+    number in the range 0 to less than 1 (inclusive of 0, but
+    not 1)
+  * Math.floor(), N/A, returns the largest integer less than or
+    equal to a given number
+  * drawImage(), canvas, provides different ways to draw an
+    image onto the canvas
+=================================================================
+
+QCCs
+-----------------------------------------------------------------
+* 
+=================================================================
+=================================================================
