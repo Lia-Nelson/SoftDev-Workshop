@@ -2,6 +2,7 @@ Team IDon'tKnow :: Michael Borczuk, Julia (Lia) Nelson
 SoftDev pd1
 K32 -- More Moving Parts
 2022-02-17
+time spent: 1.2 hours
 
 DISCO
 -----------------------------------------------------------------
@@ -69,6 +70,13 @@ DISCO
 
 QCCs
 -----------------------------------------------------------------
-*
-=================================================================
+* If we implemented a displacement where some part of the image
+  would have exceeded the frame, we could have either multiplied
+  the current x/y value by -1 (on the side close to 0) or
+  subtracted the amount by which the x/y value plus the width/
+  height of the image exceeded the width/height of the canvas
+  from the current x/y coordinate before applying the new
+  displacement * x/y direction to maintain a consistent velocity
+* We chose not to implement a displacement, instead moving the
+  image by only one pixel in the x/y direction each frame
 =================================================================
