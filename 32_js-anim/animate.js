@@ -38,8 +38,10 @@ var dirY= 1;
 
 var DVD = () => {
   // on button press, recalculate the x and y coordinates of the dvd logo
-  imgX = Math.floor(Math.random() * (c.width - 100 + 1));
-  imgY = Math.floor(Math.random() * (c.height - 50 + 1));
+  imgX = Math.floor(Math.random() * (c.width - imgWidth));
+  imgY = Math.floor(Math.random() * (c.height - imgHeight));
+  dirX = 1;
+  dirY = 1;
   // draw the logo
   drawDVD();
 };
