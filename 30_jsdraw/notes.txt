@@ -3,6 +3,7 @@ Nelson
 SoftDev pd1
 K30 -- canvas based JS drawing
 2022-02-14
+time spent: 1.8 hours
 
 DISCO
 -----------------------------------------------------------------

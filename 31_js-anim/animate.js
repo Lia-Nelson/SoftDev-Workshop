@@ -3,6 +3,7 @@
 // SoftDev pd1
 // K31 -- Paint Paint Paint...
 // 2022-02-16
+// time spent: 1.3 hours
 
 // model for HTML5 canvas-based animation
 

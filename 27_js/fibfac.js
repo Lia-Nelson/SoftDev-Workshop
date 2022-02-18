@@ -2,6 +2,7 @@
 // SoftDev pd1
 // K27 -- Basic functions in JavaScript
 // 2022-02-04
+// time spent: 1.1 hours
 // --------------------------------------------------
 
 

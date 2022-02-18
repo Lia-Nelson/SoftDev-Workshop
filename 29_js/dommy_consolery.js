@@ -1,9 +1,9 @@
 // Team Apples Oranges :: Ishraq Mahid,
-// Naomi Naranjo, Julia (Lia)
-// Nelson
+// Naomi Naranjo, Julia (Lia) Nelson
 // SoftDev pd1
 // K29 -- DOMfoolery++
 // 2022-02-10
+// time spent: 1.8 hours
 // --------------------------------------------------
 
 
