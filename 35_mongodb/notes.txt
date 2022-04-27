@@ -1,0 +1,35 @@
+Julia (Lia) Nelson
+SoftDev pd1
+K34 -- Another DB Perspective (MongoDB)
+2022-04-26
+time spent: 0.7 hours
+
+QCC
+-----------------------------------------------------------------
+* What does RDBMS stand for?
+* How does MongoDB foster easy changes to the data model?
+  * What happens to data that is in the old format/model?
+* Is there a fast way to avoid altering the design of the data
+  model at any given phase of the application lifetime?
+* Top-down vs. bottom-up approach to creating a data model
+* How is the application workload evaluated? Is this done
+  automatically? Does MongoDB keep track of how many times
+  specific data is utilized for a specific purpose?
+* Nice explanation of linking vs. embedding
+* It seems as though there could be an issue when running the
+  batch updater if the new/old data models are not easily
+  compatible
+   * To what extent is the batch update performed by the user?
+* Tabular approach creates a new document for each reading
+  (thermostat example)
+* Document approach allows for a single document that covers
+  readings within a specified time interval (bucket pattern
+  implementation)
+* What is an IoT reading?
+* The computed pattern gives an average (useful descriptor of
+  data)
+   * Can either be counted and added each time (takes a lot of
+     CPU work) or can be updated each time there is more data
+     (e.g. sum and number of data points) to make computation
+     more efficient
+=================================================================
