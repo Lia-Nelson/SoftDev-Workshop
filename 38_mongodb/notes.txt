@@ -1,0 +1,52 @@
+Julia (Lia) Nelson
+SoftDev pd1
+K34 -- Another DB Perspective (MongoDB Chapter 2)
+2022-04-27
+time spent: 0.8 hours
+
+QCC
+-----------------------------------------------------------------
+* JSON = JavaScript Standard Object Notation
+   * Format:
+      * Start and end with {}
+      * Separate key and value with :
+      * Separate key:value pair with ,
+      * "Keys" surrounded by ""
+      * Text based
+* Keys in JSON are often referred to as fields in MongoDB
+* BSON = Binary JSON
+   * Faster parsing
+   * Bridges gap between binary representation and JSON
+   * Has been extended to support additional data types
+* In JSON
+   * mongoimport
+   * mongoexport
+* In BSON
+   * mongorestore (import)
+   * mongodump (export)
+* Can files imported as BSON or JSON be exported as the other
+  type?
+* URI = uniform resource identifier
+* srv establishes a secure connection
+* namespace = the concatenation of the database name and
+  collection name
+* Queries must user valid JSON
+   * Returned documents will contain the queried field:value
+* Connecting to the Atlas cluster: mongo
+  "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/
+  admin"
+* For the sake of this course:
+  mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.dgjkc.mongodb.net/admin"
+* show dbs  shows list of databases in cluster
+* use database_name  selects database to work with
+* show collections  shows collections in database
+* db.collection.find(JSON QUERY)  runs a query
+* it  stands for iterate, iterates through cursor
+   * cursor is a pointer to the result set of a query
+      * a pointer is a direct address of of the memory location
+* .count()  gives the number of documents that satisfy a query
+* .pretty() formats the documents in the cursor
+* The find command without a query ({}) gives the first 20
+  documents of the collection (not ordered)
+* The mongo shell is a fully functioning JavaScript interpreter
+=================================================================
