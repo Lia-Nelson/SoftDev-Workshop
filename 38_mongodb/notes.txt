@@ -85,4 +85,6 @@ QCC
   * db.listingsAndReviews.find({ "amenities": "Wifi" },
                            { "price": 1, "address": 1,
                              "_id": 0, "maximum_nights":0 }).pretty()
+* Can only mix 0s and 1s in projections to explicitly exclude
+  _id (included by default)
 =================================================================
