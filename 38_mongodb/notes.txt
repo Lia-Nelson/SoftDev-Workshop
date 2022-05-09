@@ -87,4 +87,6 @@ QCC
                              "_id": 0, "maximum_nights":0 }).pretty()
 * Can only mix 0s and 1s in projections to explicitly exclude
   _id (included by default)
+* $elemMatch searches through array for elements that match
+  query which will be shown along with the _id value
 =================================================================
