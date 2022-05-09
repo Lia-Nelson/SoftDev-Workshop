@@ -22,8 +22,7 @@ QCC
   * adding --drop removes the whole collection before reinserting
   it
 * Connect to Atlas cluster
-  * mongo "mongodb+srv://<username>:<password>@<cluster>.mongodb
-    .net/admin"
+  * mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.dgjkc.mongodb.net/admin"
 * Navigate to the database that we need:
   * use sample_training
 * Get a random document from the collection:
