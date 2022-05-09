@@ -2,7 +2,7 @@ Julia (Lia) Nelson
 SoftDev pd1
 K34 -- Another DB Perspective (MongoDB Chapter 4)
 2022-05-08
-time spent: 0.8 hours
+time spent: 1 hours
 
 QCC
 -----------------------------------------------------------------
@@ -45,4 +45,10 @@ QCC
 * If have to different or queries will assume that or combines
   them unless explicit and
 * $not can only work on one clause
+* $expr allows the use of aggregation expressions within query
+  language
+  * also allows to use variables and conditional statements
+  * allows comparison of different fields within document
+* Aggregation syntax: {<operator>: {<field>, <value>}}
+* MQL syntax: {<field>: {<operator>: <value>}}
 =================================================================
