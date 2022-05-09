@@ -1,52 +1,80 @@
 Julia (Lia) Nelson
 SoftDev pd1
-K34 -- Another DB Perspective (MongoDB Chapter 2)
-2022-04-27
+K34 -- Another DB Perspective (MongoDB Chapter 3)
+2022-05-08
 time spent: 0.8 hours
 
 QCC
 -----------------------------------------------------------------
-* JSON = JavaScript Standard Object Notation
-   * Format:
-      * Start and end with {}
-      * Separate key and value with :
-      * Separate key:value pair with ,
-      * "Keys" surrounded by ""
-      * Text based
-* Keys in JSON are often referred to as fields in MongoDB
-* BSON = Binary JSON
-   * Faster parsing
-   * Bridges gap between binary representation and JSON
-   * Has been extended to support additional data types
-* In JSON
-   * mongoimport
-   * mongoexport
-* In BSON
-   * mongorestore (import)
-   * mongodump (export)
-* Can files imported as BSON or JSON be exported as the other
-  type?
-* URI = uniform resource identifier
-* srv establishes a secure connection
-* namespace = the concatenation of the database name and
-  collection name
-* Queries must user valid JSON
-   * Returned documents will contain the queried field:value
-* Connecting to the Atlas cluster: mongo
-  "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/
-  admin"
-* For the sake of this course:
-  mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.dgjkc.mongodb.net/admin"
-* show dbs  shows list of databases in cluster
-* use database_name  selects database to work with
-* show collections  shows collections in database
-* db.collection.find(JSON QUERY)  runs a query
-* it  stands for iterate, iterates through cursor
-   * cursor is a pointer to the result set of a query
-      * a pointer is a direct address of of the memory location
-* .count()  gives the number of documents that satisfy a query
-* .pretty() formats the documents in the cursor
-* The find command without a query ({}) gives the first 20
-  documents of the collection (not ordered)
-* The mongo shell is a fully functioning JavaScript interpreter
+* Can add a document with insert document button
+  * Can edit with JSON notation or one field-value pair at a
+    time
+* Every document must have a unique _id
+* ObjectId() gives default value for _id (but a different value
+  can be specified)
+* In field-value mode use tab or click to get to new field-value
+  pair
+* Duplicate key error given when attempt to add duplicate
+  documents
+  * Gives collection present and _id value
+* mongoimport --uri="mongodb+srv://<username>:<password>@
+  <cluster>.mongodb.net/sample_supplies" sales.json
+  * adding --drop removes the whole collection before reinserting
+  it
+* Connect to Atlas cluster
+  * mongo "mongodb+srv://<username>:<password>@<cluster>.mongodb
+    .net/admin"
+* Navigate to the database that we need:
+  * use sample_training
+* Get a random document from the collection:
+  * db.inspections.findOne()
+* db.inspections.insert(<document>)
+  * <document> encapsulated by {}
+* MongoDB has schema validation functionality
+  * Allows document structure to be enforced
+* Insert three test documents
+  * db.inspections.insert([ { "test": 1 }, { "test": 2 },
+  { "test": 3 } ])
+* Insert three test documents but specify the _id values:
+  * db.inspections.insert([{ "_id": 1, "test": 1 },
+    { "_id": 1, "test": 2 }, { "_id": 3, "test": 3 }])
+* Insert multiple documents specifying the _id values, and using
+  the "ordered": false option.
+  * db.inspections.insert([{ "_id": 1, "test": 1 },
+    { "_id": 1, "test": 2 }, { "_id": 3, "test": 3 }],
+    { "ordered": false })
+  * default "ordered" set to true
+    * inserts documents in the order they are listed in array
+    * will try to insert all of documents even if one causes
+      error
+* Creates collection for you if insert into one does not exist
+* Can use collection database that does not exist yet
+  * Will only be added to collections if given document(s)
+* Can use edit button in data explorer to update documents
+* Array of documents:
+  * [ { "coat": "fur",
+                    "type": "soft" },
+                  { "defense": "claws",
+                    "location": "paws",
+                    "nickname": "murder mittens" } ]
+* Update all documents in the zips collection where the city
+  field is equal to "HUDSON" by adding 10 to the current value
+  of the "pop" field.
+  * db.zips.updateMany({ "city": "HUDSON" },
+  { "$inc": { "pop": 10 } })
+  * Can use $set instead of $inc to set value
+    * Using $set with a field that does not exist adds field
+  * Can use $push to add elements to arrays
+  * Could also increment multiple fields with multiple
+    specified amounts
+* Can use updateOne() command to update a random document with
+  attributes
+* Can use delete button in data explorer to delete documents
+* Delete all the documents that have test field equal to 1.
+  * db.inspections.deleteMany({ "test": 1 })
+* Delete one document that has test field equal to 3.
+  * db.inspections.deleteOne({ "test": 3 })
+* Drop the inspection collection.
+  * db.inspection.drop()
+* Removing all collections in a database removes database
 =================================================================
