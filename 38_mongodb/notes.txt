@@ -91,4 +91,5 @@ QCC
   query which will be shown along with the _id value
 * can use dot notation to get subfield (use field name or value
   of index starting from 0)
+* $regex operator allows matching strings
 =================================================================
