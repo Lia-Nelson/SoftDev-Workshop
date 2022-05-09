@@ -88,4 +88,5 @@ QCC
                                            "Laptop friendly workspace" ]
                                          }
                             }).pretty()
+* $push turns field into array field if was not already
 =================================================================
