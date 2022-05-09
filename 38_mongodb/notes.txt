@@ -1,52 +1,48 @@
 Julia (Lia) Nelson
 SoftDev pd1
-K34 -- Another DB Perspective (MongoDB Chapter 2)
-2022-04-27
+K34 -- Another DB Perspective (MongoDB Chapter 4)
+2022-05-08
 time spent: 0.8 hours
 
 QCC
 -----------------------------------------------------------------
-* JSON = JavaScript Standard Object Notation
-   * Format:
-      * Start and end with {}
-      * Separate key and value with :
-      * Separate key:value pair with ,
-      * "Keys" surrounded by ""
-      * Text based
-* Keys in JSON are often referred to as fields in MongoDB
-* BSON = Binary JSON
-   * Faster parsing
-   * Bridges gap between binary representation and JSON
-   * Has been extended to support additional data types
-* In JSON
-   * mongoimport
-   * mongoexport
-* In BSON
-   * mongorestore (import)
-   * mongodump (export)
-* Can files imported as BSON or JSON be exported as the other
-  type?
-* URI = uniform resource identifier
-* srv establishes a secure connection
-* namespace = the concatenation of the database name and
-  collection name
-* Queries must user valid JSON
-   * Returned documents will contain the queried field:value
-* Connecting to the Atlas cluster: mongo
-  "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/
-  admin"
-* For the sake of this course:
-  mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.dgjkc.mongodb.net/admin"
-* show dbs  shows list of databases in cluster
-* use database_name  selects database to work with
-* show collections  shows collections in database
-* db.collection.find(JSON QUERY)  runs a query
-* it  stands for iterate, iterates through cursor
-   * cursor is a pointer to the result set of a query
-      * a pointer is a direct address of of the memory location
-* .count()  gives the number of documents that satisfy a query
-* .pretty() formats the documents in the cursor
-* The find command without a query ({}) gives the first 20
-  documents of the collection (not ordered)
-* The mongo shell is a fully functioning JavaScript interpreter
+* Find all documents where the tripduration was less than or
+  equal to 70 seconds and the usertype was not Subscriber:
+  * db.trips.find({ "tripduration": { "$lte" : 70 },
+                "usertype": { "$ne": "Subscriber" } }).pretty()
+* Find all documents where the tripduration was less than or
+  equal to 70 seconds and the usertype was Customer using a
+  redundant equality operator:
+  * db.trips.find({ "tripduration": { "$lte" : 70 },
+                "usertype": { "$eq": "Customer" }}).pretty()
+  * $gte (greater than or equal to)
+  * $lt (less than or equal to)
+  * $gt (greater than or equal to)
+* Find all documents where the tripduration was less than or
+  equal to 70 seconds and the usertype was Customer using the
+  implicit equality operator:
+  * db.trips.find({ "tripduration": { "$lte" : 70 },
+                "usertype": "Customer" }).pretty()
+* $ uses:
+  * precedes MQL operators
+    * Query operators give different ways to locate data
+    * Comparison operators let us find data within range
+    * Logic operators are $and, $or, $nor and $not (no xor)
+      * Why would nor be present but not xor (since both can
+        be constructed from prior operators)?
+  * precedes Aggregation pipeline stages
+  * allows field value access
+* Find all documents where airplanes CR2 or A81 left or landed
+  in the KZN airport:
+  * db.routes.find({ "$and": [ { "$or" :[ { "dst_airport": "KZN" },
+                                    { "src_airport": "KZN" }
+                                  ] },
+                          { "$or" :[ { "airplane": "CR2" },
+                                     { "airplane": "A81" } ] }
+                         ]}).pretty()
+* There is an implict and that can be utilized when applying
+  multiple conditions to the same field
+* If have to different or queries will assume that or combines
+  them unless explicit and
+* $not can only work on one clause
 =================================================================
