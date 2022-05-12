@@ -1,6 +1,6 @@
 Julia (Lia) Nelson
 SoftDev pd1
-K34 -- Another DB Perspective (MongoDB Chapter 2)
+K36 -- Another DB Perspective (MongoDB Chapter 2)
 2022-04-27
 time spent: 0.8 hours
 
