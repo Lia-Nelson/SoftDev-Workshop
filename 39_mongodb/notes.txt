@@ -1,8 +1,8 @@
 Julia (Lia) Nelson
 SoftDev pd1
-K34 -- Another DB Perspective (MongoDB Chapter 5)
-2022-05-09
-time spent: 0.5 hours
+K39 -- Another DB Perspective (MongoDB Chapter 5)
+2022-05-11
+time spent: 0.9 hours
 
 QCC
 -----------------------------------------------------------------
@@ -26,4 +26,28 @@ QCC
 * sort(), limit(), pretty() and count() are cursor methods
 * using limit() without sort() returns random document(s)
 * thus cursor.limit().sort() assumed mean cursor.sort().limit()
+* index = database structure that stores a small portion of the
+  collection's data set in any easy to traverse form
+* Single field index - createIndex({<field>: <value>})
+  * if value is, 1 increasing order
+  * if -1 decreasing order
+* Compound index - createIndex({<field>: <value>,
+  <field>: <value>})
+* Data modeling = way to organize data in document to support
+  application performance and querying capabilities
+* Data is stored in the way that it is used
+  * Data that is used together should be stored together
+  * Data model should evolve as application evolves
+* Everything used to locate a document in MQL can also be used
+  to modify it
+* updateOne({<query to locate>},{<update>})
+* upsert is a hybrid of upsert and insert that should only be
+  used when needed
+  * updateOne({<query to locate>},{<update>},{"upsert":true})
+  * updates if there is a match
+  * inserts if no documents match query
+  * should not be used to only update existing document or
+    create new one
+* $inc creates field if it does not exist yet
+* similarly, $push can both update and insert
 =================================================================
